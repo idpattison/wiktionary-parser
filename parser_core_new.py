@@ -188,7 +188,7 @@ class WiktionaryParser(object):
             if def_type == 'definitions':
                 def_type = ''
             definition_list.append((def_index, definition_text, def_type))
-        return definition_list
+        return definition_list 
 
     def parse_examples(self, word_contents):
         definition_id_list = self.get_id_list(word_contents, 'definitions')
@@ -215,28 +215,38 @@ class WiktionaryParser(object):
         etymology_id_list = self.get_id_list(word_contents, 'etymologies')
         etymology_list = []
         etymology_tag = None
+        item_tag = None
         for etymology_index, etymology_id, _ in etymology_id_list:
-            etymology_text = ''
+            etymology_text = {
+                'text': '',
+                'map': []
+            }
             span_tag = self.soup.find_all('span', {'id': etymology_id})[0]
             next_tag = span_tag.parent.find_next_sibling()
             while next_tag and next_tag.name not in ['h3', 'h4', 'div', 'h5']:
                 etymology_tag = next_tag
                 next_tag = next_tag.find_next_sibling()
                 if etymology_tag.name == 'p':
-                    # added this to the original code to mark terms in italics with { }
                     for item in etymology_tag.contents:
                         if (isinstance(item, NavigableString)):
-                            etymology_text += item
+                            etymology_text['text'] += item
+                            item_tag = {
+                                'text': item
+                            }
+                            etymology_text['map'].append(item_tag)
                         else:
-                            if (item.name == 'i' or (item.name == 'span' and 'mention-tr' in item.attrs['class'])):
-                                etymology_text += '{' + item.text + '}'
-                            else:
-                                etymology_text += item.text
-                    # end of added code - original code below
-                    # etymology_text += etymology_tag.text
+                            etymology_text['text'] += item.text
+                            item_tag = {
+                                'text': item.text,
+                                'name': item.name,
+                                'class': item.attrs['class']
+                            }
+                            if ('lang' in item.attrs):
+                                item_tag['lang'] = item.attrs['lang']
+                            etymology_text['map'].append(item_tag)
                 else:
                     for list_tag in etymology_tag.find_all('li'):
-                        etymology_text += list_tag.text + '\n'
+                        etymology_text['text'] += list_tag.text + '\n'
             etymology_list.append((etymology_index, etymology_text))
         return etymology_list
 

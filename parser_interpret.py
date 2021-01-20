@@ -5,19 +5,22 @@ import string
 from wiktionary_languages import * 
 from nltk.tokenize import word_tokenize
 from parser_core import WiktionaryParser
-# from wiktionaryparser import WiktionaryParser
 parser = WiktionaryParser()
 
 ancestor = ['from', 'derived', 'through', '<']
-cognate = ['cognate', 'compare']
+cognate = ['cognate', 'cognates', 'compare', 'compares', 'related']
 uncertain = ['possible', 'possibly', 'probable', 'probably', 'maybe', 'perhaps']
 loan = ['borrowed', '→']
 root = ['root', 'stem']
 exclusions = ['and', 'the', 'a']
-inflections = ['plural', 'genitive', 'diminutive', 'comparative', 'superlative', 'supine']
-two_word_inflections = ['present infinitive', 'perfect active',
+
+inflections = ['plural', 'genitive', 'diminutive', 'comparative', 'superlative', 'supine', 'preterite']
+two_word_inflections = ['present infinitive', 'perfect active', 'past particple', 'present particple',
 'feminine singular', 'masculine plural', 'feminine plural']
+
 filename = ''
+parent_written = False
+previous_language_list = []
 
 def start(start_words, debug_mode, passed_filename):
 
@@ -47,25 +50,26 @@ def start(start_words, debug_mode, passed_filename):
 
         # if the word is not in Wiktionary, print the error and continue to the next word
         if (len(word_data) == 0):
-            print_to_file(filename, '\nWORD NOT FOUND: ' + word_to_fetch)
+            print_to_file('\nWORD NOT FOUND: ' + word_to_fetch)
             continue
 
         if (debug_mode == True):
-            print_to_file(filename, '\nINITIAL DATA IMPORT')
+            print_to_file('\nINITIAL DATA IMPORT')
             input_string = json.dumps(word_data, indent=4, ensure_ascii=False).encode('utf8')
-            print_to_file(filename, input_string.decode())
+            print_to_file(input_string.decode())
 
 
         word = word_data[s['variant'] - 1] # variant is 1-based
         
         # define the new word structure
         new_word = { 
+                    'key': (s['word'] + '#' + s['language'] + '#' + str(s['variant'])).replace(' ', '_'),
                     'word': s['word'],
                     'language': s['language'],
                     'variant': s['variant'],
                     'meaning': s['meaning'],
                     'forms': [],
-                    'etymology': word['etymology'],
+                    'etymology': word['etymology'].replace('{', '').replace('}', ''),
                     'ancestors': [],
                     'descendants': [],
                     'related': []
@@ -75,7 +79,6 @@ def start(start_words, debug_mode, passed_filename):
             new_word['ipa'] = word['pronunciations']['text'][0]
 
         # add all word forms
-        new_word['hash'] = hash(new_word['word'] + new_word['language'] + str(new_word['variant']))
         form = 0
         for d in word['definitions']:
             word_def = {
@@ -90,17 +93,18 @@ def start(start_words, debug_mode, passed_filename):
             # parse the descendants one by one and interpret
             for rel in d['relatedWords']:
                 if (rel['relationshipType'] == 'descendants'):
-                    # handle a glitch in the WiktionaryParser code
-                    # nested descendants result in duplicated text - remove it
-                    for i in range(len(rel['words']) - 1):
-                        if (rel['words'][i + 1] in rel['words'][i]):
-                            rel['words'][i] = rel['words'][i].replace(rel['words'][i + 1], '')
+                    # # handle a glitch in the WiktionaryParser code
+                    # # nested descendants result in duplicated text - remove it
+                    # for i in range(len(rel['words']) - 1):
+                    #     if (rel['words'][i + 1] in rel['words'][i]):
+                    #         rel['words'][i] = rel['words'][i].replace(rel['words'][i + 1], '')
                     for desc in rel['words']:
-                        descendant = extract(desc, debug_mode, True)
-                        interpret(descendant, new_word, True)
+                        parseEtymology(desc, new_word, debug_mode, True)
+                        # descendant = extract(desc, debug_mode, True)
+                        # interpret(descendant, new_word, True)
 
             # parse the inflections
-            processInflections(new_word, form)
+            parseInflections(new_word, form)
             form += 1
 
         # parse the IPA
@@ -112,17 +116,22 @@ def start(start_words, debug_mode, passed_filename):
                 new_word['ipa'] = ipa[slash1 : slash2 + 1]
 
         # parse the etymology and interpret the structure
-        structure = extract(word['etymology'], debug_mode)
-        interpret(structure, new_word)
+        parseEtymology(word['etymology'], new_word, debug_mode)
+        # structure = extract(word['etymology'], debug_mode)
+        # interpret(structure, new_word)
 
         # print the new word structure
         if (debug_mode == True):
-            print_to_file(filename, '\nFINAL JSON OUTPUT')
+            print_to_file('\nFINAL JSON OUTPUT')
         json_string = json.dumps(new_word, indent=4, ensure_ascii=False).encode('utf8')
-        print_to_file(filename, json_string.decode())
+        print_to_file(json_string.decode())
 
 
-def processInflections(word_structure, form):
+def parseInflections(word_structure, form):
+
+    # TODO - the Wiktionary markup specifies many more inflection types, we could capture those directly from the HTML
+    # rather than hard coding them in here - see https://en.wiktionary.org/wiki/Category:Form-of_templates
+
     text = word_tokenize(word_structure['forms'][form]['definitions'][0])
 
     # concatenate reconstructed word forms
@@ -183,12 +192,17 @@ def processInflections(word_structure, form):
         word_structure['forms'][form]['inflections'][current_inflection] = current_word.strip()
 
 
-def extract(text, debug_mode, descendant=False):
-    
-    # INITIAL SETUP
-    
-    # use NLTK to tokenise the text
+# parse the etymology text into words, each with their language and relationship to the core word
+# NB this coule be the main etymology text, or individual descendant strings
+
+def parseEtymology(text, word_structure, debug_mode, descendant=False):
+
+    #  INITIAL SETUP
+
+    # use NLTK to tokenize the text
     tokens = word_tokenize(text)
+    global parent_written
+    parent_written = False
 
     # build a basic token definition consisting of a dict item for each token
     td = []
@@ -231,22 +245,31 @@ def extract(text, debug_mode, descendant=False):
                 td[i]['language'] = True
 
 
-    # RECONSTRUCTED WORD FORMS
+    # ETYMOLOGICAL WORDS
 
-    # in lingusitics, reconstructed words are shown like this: *h₁rowdʰós - but will be 2 separate tokens
-    # parse across word tuples and mark any reconstructed words
-    for i in range(len(td) - 1):
+    # the data from Wiktionary will return our etymoloical words wrapped in brackets { }
+    # as the tokenizer will separate these, we need to restore them
+    # NB as a side effect, this will also restore reconstructed word form such as *h₁rowdʰós which the
+    # tokenizer will split into * and h₁rowdʰós
+    for i in range(len(td) - 2):
         if ('ignoreFlag' in td[i]):
             pass
         else:
-            if (td[i]['token'] == '*'):
-                td[i]['token'] = '*' + td[i + 1]['token']
-                td[i]['reconstructed'] = True
-                # mark the redundant token to be ignored
-                td[i + 1]['ignoreFlag'] = True
+            if (td[i]['token'] == '{'):
+                # find the matching end quote token
+                quote2 = i + 1
+                while (quote2 < len(td) and td[quote2]['token'] != '}'):
+                    quote2 += 1
+                if (quote2 < len(td)):
+                    for x in range(i, quote2):
+                        if (x != i and td[x + 1]['token'] != '}' and td[x]['token'] not in ['*', '(', ')'] and td[x + 1]['token'] not in ['(', ')'] ):
+                            td[i]['token'] += ' '
+                        td[i]['token'] += td[x + 1]['token']
+                        # mark the redundant tokens to be ignored
+                        td[x + 1]['ignoreFlag'] = True
 
 
-    # SIMILAR MEANINGS
+    # DIFFERENT MEANINGS
 
     # look for forms like “redhead” in quotes showing a similar but different meaning
     for i in range(len(td) - 2):
@@ -260,11 +283,12 @@ def extract(text, debug_mode, descendant=False):
                     quote2 += 1
                 if (quote2 < len(td)):
                     for x in range(i, quote2):
-                        if (x != i and td[x + 1]['token'] != ',' and td[x + 1]['token'] != '”'):
+                        if (x != i and td[x + 1]['token'] not in ['”', ',', ';']):
                             td[i]['token'] += ' '
                         td[i]['token'] += td[x + 1]['token']
                         # mark the redundant tokens to be ignored
                         td[x + 1]['ignoreFlag'] = True
+
 
     # now remove the redundant tokens
     temp = []
@@ -275,269 +299,166 @@ def extract(text, debug_mode, descendant=False):
     while temp:
         td.append(temp.pop())
 
-
-
-    # PARSING THE STRUCTURE
+    
+    # INTERPRET THE STRUCTURE
 
     # parse over the token definitions and build a structured etymology
-    structure = []
-    phrase = []
+    language_list = []
+    word_list = []
+    mode = 'descendant' if (descendant == True) else 'cognate'
+    attrs = {
+        'different-meaning': '',
+        'uncertain': False,
+        'loan-word': False,
+        'latin-form': '',
+        'root-form': False
+    }
+
+    global previous_language_list
+    previous_language_list.clear()
+    debug_string = ''
 
     for d in td:
-        # NB if we're dealing with a descendant string, don't break
-        # build up a phrase until we hit a breaking token
-        # if this token is an open-brace, start a new phrase
-        if (d['token'] == '(' and descendant == False):
-            structure.append(phrase)
-            phrase = []
-    
-        phrase.append(d)
-        # if this token is a comma, end-brace, or other breaking punctuation, end the phrase here
-        if (d['token'] in [',', ')', '.', ';', '\n'] and descendant == False):
-            structure.append(phrase)
-            phrase = []
-            continue
 
-        # if this is an ancestor word and we already have a language in the phrase, start a new phrase
-        if (d['token'] in ancestor):
-            language_present = False
-            for tk in phrase:
-                if ('language' in tk):
-                    language_present = True
-            if (language_present == True):
-                # we've already added this token to the current phrase so remove it
-                phrase.pop()
-                structure.append(phrase)
-                phrase = []
-                phrase.append(tk)
+        token = d['token']
+        debug_string = 'Token: ' + token + ' | '
 
+        # if this is an ancestor or cognate word, flush any current language / word data, the set the mode
+        if ((token.lower() in ancestor or token.lower() in cognate) and descendant == False):
+            if (len(word_list) > 0 and len(language_list) > 0):
+                debug_string += 'flushing words [' + ' '.join(language_list) + ' ' + ' '.join(word_list) + '] | ' 
+                flushWords(word_list, language_list, mode, attrs, word_structure)
+            mode = 'ancestor' if (token.lower() in ancestor) else 'cognate'
+            debug_string += 'setting mode to ' + mode + ' | '
 
-    # if there is anything left in phrase[] then we have reached the end of the structure without 
-    # breaking - append this to end of the previous phrase
-    if (len(phrase) > 0):
-        if (len(structure) == 0):
-            structure.append(phrase)
-        else:
-            for tk in phrase:
-                structure[-1].append(tk)
+        # if this is a language, add it to the language list
+        # if there are already words in the word list, then this must be a new language - so flush previous
+        if ('language' in d):
+            if (len(word_list) > 0):
+                debug_string += 'flushing words [' + ' '.join(language_list) + ' ' + ' '.join(word_list) + '] | ' 
+                flushWords(word_list, language_list, mode, attrs, word_structure)
+            language_list.append(token)
+            debug_string += 'adding language ' + token + ' | '
 
+        # if this is an etymological word, remove the brackets and add it to the word list
+        if (len(token) > 0 and token[0] == '{' and token[-1] == '}'):
+            # however if it is a Latin form and there is an existing word in non-Latin form, add it as a Latin form instead
+            if (len(word_list) > 0 and isNonLatin(word_list[0]) and isLatin(token)):
+                attrs['latin-form'] = token.strip('{}')
+                debug_string += 'adding Latin form ' + token.strip('{}') + ' | '
+            else:
+                word_list.append(token.strip('{}'))
+                debug_string += 'adding word ' + token.strip('{}') + ' | '
 
-    # append any tokens in braces to the end of the language-word pair
-    # this should result in the form "Ancient Greek ἐρυθρός ( eruthrós )"
-    # but filter out those brackets with e.g. "( compare ..."
-    # NB cannot append the first line to a previous one so start at the second line
-    for s in range(2, len(structure)):    
-        if (len(structure[s]) > 0 and structure[s][0]['token'] == '('):
-            if (structure[s][1]['token'].lower() not in cognate and
-                structure[s][1]['token'].lower() not in ancestor):
-                line = s
-                while True:
-                    for phrase in structure[line]:
-                        structure[s - 1].append(phrase)
-                    structure[line] = []
-                    line += 1
-                    if (structure[s - 1][-1]['token'] == ')' or line == len(structure)):
-                        break
+        # if this is a word (or words) wrapped in quotes, remove them and add it as a different meaning
+        if (len(token) > 2 and token[0] == '“' and token[-1] == '”'):
+            attrs['different-meaning'] = token[1:-1]
+            debug_string += 'adding different meaning ' + token + ' | '
 
+        # if this is a word denoting uncertainty, flag it
+        if (token.lower() in uncertain):
+            attrs['uncertain'] = True
+            debug_string += 'flagging as uncertain | '
 
-    # CONCATENATE RELATED PHRASES
+        # if this is a word denoting a loan word, flag it
+        if (token.lower() in loan):
+            attrs['loan-word'] = True
+            debug_string += 'flagging as loan word | '
 
-    # first remove all singleton commas as they get in the way
-    for s in range(len(structure)):
-        if (len(structure[s]) == 1 and structure[s][0]['token'] == ','):
-            structure[s].clear()
-    
-    # NB do this backwards in case we need to join multiple lines
-    for s in range(len(structure) - 2, 0, -1):
-        # if the phrase has a single language, ends in a comma, and the next phrase starts with a language
-        # this will happen if there are multiple languages associated with one word
-        if (len(structure[s]) == 2 and 'language' in structure[s][0] and
-            structure[s][1]['token'] == ',' and 'language' in structure[s + 1][0]):
-            for t in structure[s + 1]:
-                structure[s].append(t)
-            structure[s + 1] = []
-            continue
+        # if this is a word denoting a root form, copy the previous language across to this
+        # if there are any words in the list, flush them
+        if (token.lower() in root and descendant == False):
+            if (len(word_list) > 0):
+                debug_string += 'flushing words [' + ' '.join(language_list) + ' ' + ' '.join(word_list) + '] | ' 
+                flushWords(word_list, language_list, mode, attrs, word_structure)
+            attrs['root-form'] = True
+            debug_string += 'adding language(s) ' + ' '.join(previous_language_list) + ' | '
+            language_list += previous_language_list
+            debug_string += 'flagging as root form | '
 
-        # if the phrase ends in a comma, and the next phrase starts with a word which is
-        # not a 'keyword' or a language (this should have been detected above)
-        # this will happen if there are multiple words associated with one language
-        if (len(structure[s]) > 0 and structure[s][-1]['token'] == ',' and 
-            'language' not in structure[s + 1][0] and
-            structure[s + 1][0]['token'].lower() not in ancestor and
-            structure[s + 1][0]['token'].lower() not in cognate and
-            structure[s + 1][0]['token'].lower() not in uncertain and
-            structure[s + 1][0]['token'].lower() not in root and
-            structure[s + 1][0]['token'].lower() not in loan and
-            structure[s + 1][0]['token'].lower() not in exclusions):
-            for t in structure[s + 1]:
-                structure[s].append(t)
-            structure[s + 1] = []
-            continue
+        # if this is a full stop, treat it as an explicit stop and flush any words
+        if (token == '.'):
+            if (len(word_list) > 0):
+                debug_string += 'full stop | flushing words [' + ' '.join(language_list) + ' ' + ' '.join(word_list) + '] | ' 
+                flushWords(word_list, language_list, mode, attrs, word_structure)
 
+        if (debug_mode):
+            print_to_file(debug_string)
 
-    # STRIP OUT BLANK PHRASES
+    # if there are still items in the word and language lists, flush them
+    if (len(word_list) > 0):
+        debug_string += 'end of tokens | flushing words [' + ' '.join(language_list) + ' ' + ' '.join(word_list) + '] | ' 
+        flushWords(word_list, language_list, mode, attrs, word_structure)
+        if (debug_mode):
+            print_to_file(debug_string)
 
-    temp = []
-    while structure:
-        x = structure.pop()
-        if len(x) > 0:
-            temp.append(x)
-    while temp:
-        structure.append(temp.pop())
+        
 
+# write the language list and word list items to the word structure
 
-    # print the structure
-    if (debug_mode == True):
-        print_to_file(filename, '\nINTERIM STRUCTURE')
-        for st in structure:
-            text = ''
-            for tk in st:
-                text += ' ' + tk['token']
-            print_to_file(filename, text)
+def flushWords(word_list, language_list, mode, attrs, word_structure):
 
-    return structure
+    # handle forms such as "Language word1, derived from word2"
+    global previous_language_list
+    if (mode == 'ancestor' and len(word_list) > 0 and len(language_list) == 0):
+        language_list += previous_language_list
 
-def interpret(structure, word_structure, descendant=False):
+    # iterate through the lists and write each word
+    for language in language_list:
+        for word in word_list:
+            sub_word = {
+                'word': word,
+                'language': language,
+                'meaning': word_structure['meaning']
+            }
+            if (attrs['different-meaning'] != ''):
+                sub_word['meaning'] = attrs['different-meaning']
+            if (attrs['latin-form'] != ''):
+                sub_word['latin-form'] = attrs['latin-form']
+            if (attrs['root-form']):
+                sub_word['root-form'] = True
+            if (attrs['uncertain']):
+                sub_word['uncertain'] = True
+            if (attrs['loan-word']):
+                sub_word['loan-word'] = True
 
-    # INTERPRET THE STRUCTURAL COMPONENTS
-
-    parent_found = False
-    language_list = []
-    meaning = word_structure['meaning']
-
-    for si in structure:
-
-        previous_language = language_list
-        language_list = []
-        word_list = []
-        word_relation_type = 'descendant' if descendant == True else 'related'
-        uncertain_word = False
-        loan_word = False
-        root_word = False
-        brace_mode = False
-        brace_at_start = True if (si[0]['token'] == '(') else False
-        different_meaning = ''
-        latin_form = ''
-
-        # examine each token and interpret its impact on the phrase
-        for t in si:
-            token = t['token']
-
-            # first check we're not in 'brace mode' - that's handled separately
-            if (not brace_mode):
-                # is it denoting an ancestor word? (typically 'from')
-                # NB the first ancestor will be the direct parent
-                if (token.lower() in ancestor):
-                    if (parent_found):
-                        word_relation_type = 'ancestor'
-                    else:
-                        word_relation_type = 'parent'
-                        parent_found = True
-                    continue
-
-                # is it denoting a related word? (this is the default)
-                if (token.lower() in cognate):
-                    word_relation_type = 'related'
-                    continue
-
-                # is it denoting uncertainty?
-                if (token.lower() in uncertain):
-                    uncertain_word = True
-                    continue
-
-                # is it denoting a loan word?
-                # NB for forms like "borrowed from" this should detect an ancestor which is also a loan word
-                if (token.lower() in loan):
-                    loan_word = True
-                    continue
-
-                # is it a language? add it to the list
-                # also discard any words gathered prior to this, as they will be superfluous
-                if ('language' in t):
-                    language_list.append(token)
-                    word_list.clear() 
-                    continue
-
-                # is it denoting a root or stem form?
-                # NB a problem here is this - compare "from the root *h₁rewdʰ-" with 'Low Germn root, rod"
-                # assume that if there is already a language in play, this is an actual word
-                # otherwise copy the previous language(s)
-                if (token.lower() in root):
-                    if (len(language_list) == 0):
-                        root_word = True
-                        language_list = previous_language
-                        continue
-                    else:
-                        pass  # carry on to the next if statement
-
-                # is it any other word (i.e. not punctuation)? add it to the list
-                # check against a set of predefined exclusions
-                if (token != '' and token not in string.punctuation and 
-                    token.lower() not in exclusions):
-                    word_list.append(token)
-                    continue
-
-                # is it an open brace? if so go to brace mode unless it's the first token
-                if (token == '('):
-                    if (brace_at_start == True):
-                        brace_at_start = False
-                    else:
-                        brace_mode = True
-                    continue
-
-            else: # brace mode
-
-                # if it's any kind of punctuation then ignore
-                if (token in string.punctuation):
-                    continue
-
-                # is it enclosed in quotes? if so record a different meaning
-                if (len(token) > 2 and token[0] == '“' and token[-1] == '”'):
-                    different_meaning = token[1:-1]
-                    continue
-
-                # if not, then if the core word is non-Latin, record a Latinised form
-                if (len(word_list) > 0 and not re.search('[a-zA-Z]', word_list[0])):
-                    latin_form = token
-
-        # if we found no words or languages in this phrase, ignore it
-        if (len(word_list) == 0 or len(language_list) == 0):
-            continue
- 
-        # build up the sub-word structure, one for each language and word
-        parent_written = False
-        for language in language_list:
-            for word in word_list:
-                sub_word = {
-                    'word': word,
-                    'language': language,
-                    'meaning': meaning
-                }
-                if (different_meaning != ''):
-                    sub_word['meaning'] = different_meaning
-                if (latin_form != ''):
-                    sub_word['latin-form'] = latin_form
-                if (root_word):
-                    sub_word['root-form'] = True
-                if (uncertain_word):
-                    sub_word['uncertain'] = True
-                if (loan_word):
-                    sub_word['loan_word'] = True
-
-                # add the sub-words to the overall word structure
-                # only write the parent once
-                if (word_relation_type == 'parent'):
-                    if (parent_written == False):
-                        word_structure['parent'] = sub_word
-                        parent_written = True
-                if (word_relation_type == 'ancestor'):
+            # add the sub-words to the overall word structure
+            # only write the parent once
+            global parent_written
+            if (mode == 'ancestor'):
+                if (parent_written == False):
+                    word_structure['parent'] = sub_word
+                    parent_written = True
+                else:
                     word_structure['ancestors'].append(sub_word)
-                if (word_relation_type == 'related'):
-                    word_structure['related'].append(sub_word)
-                if (word_relation_type == 'descendant'):
-                    word_structure['descendants'].append(sub_word)
+            if (mode == 'cognate'):
+                word_structure['related'].append(sub_word)
+            if (mode == 'descendant'):
+                word_structure['descendants'].append(sub_word)
 
-def print_to_file(filename, text):
+    # reset everything
+    previous_language_list.clear()
+    previous_language_list += language_list
+    language_list.clear()
+    word_list.clear()
+    mode = 'cognate'   # this is the default unless a word in the etymology modifies it
+    attrs['different-meaning'] = ''
+    attrs['uncertain'] = False
+    attrs['loan-word'] = False
+    attrs['latin-form'] = ''
+    attrs['root-form'] = False
+
+
+def isLatin(text):
+    # is there at least one Latin alphabet character in the string?
+    return re.search('[a-zA-Z]', text)
+
+def isNonLatin(text):
+    # are there zero Latin alphabet characters in the string?
+    return not re.search('[a-zA-Z]', text)
+
+
+def print_to_file(text):
     # print to the named file unless it's '' in which case print to console
     if(filename != ''):
         with open(filename, 'a') as f:
