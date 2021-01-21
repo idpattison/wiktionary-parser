@@ -172,23 +172,42 @@ class WiktionaryParser(object):
         definition_id_list = self.get_id_list(word_contents, 'definitions')
         definition_list = []
         definition_tag = None 
+        item_tag = None
         for def_index, def_id, def_type in definition_id_list:
-            definition_text = []
+            definition_text = {
+                'text': [],
+                'map': []
+            }
             span_tag = self.soup.find_all('span', {'id': def_id})[0]
             table = span_tag.parent.find_next_sibling()
             while table and table.name not in ['h3', 'h4', 'h5']:
                 definition_tag = table
                 table = table.find_next_sibling()
                 if definition_tag.name == 'p':
-                    definition_text.append(definition_tag.text.strip())
+                    definition_text['text'].append(definition_tag.text.strip())
+                    for item in definition_tag.contents:
+                        if (isinstance(item, NavigableString)):
+                            item_tag = {
+                                'text': item
+                            }
+                        else:
+                            item_tag = {
+                                'text': item.text,
+                                'name': item.name
+                            }
+                            if ('class' in item.attrs):
+                                item_tag['class'] = item.attrs['class']
+                            if ('lang' in item.attrs):
+                                item_tag['lang'] = item.attrs['lang']
+                        definition_text['map'].append(item_tag)
                 if definition_tag.name in ['ol', 'ul']:
                     for element in definition_tag.find_all('li', recursive=False):
                         if element.text:
-                            definition_text.append(element.text.strip())
+                            definition_text['text'].append(element.text.strip())
             if def_type == 'definitions':
                 def_type = ''
             definition_list.append((def_index, definition_text, def_type))
-        return definition_list
+        return definition_list 
 
     def parse_examples(self, word_contents):
         definition_id_list = self.get_id_list(word_contents, 'definitions')
@@ -215,28 +234,39 @@ class WiktionaryParser(object):
         etymology_id_list = self.get_id_list(word_contents, 'etymologies')
         etymology_list = []
         etymology_tag = None
+        item_tag = None
         for etymology_index, etymology_id, _ in etymology_id_list:
-            etymology_text = ''
+            etymology_text = {
+                'text': '',
+                'map': []
+            }
             span_tag = self.soup.find_all('span', {'id': etymology_id})[0]
             next_tag = span_tag.parent.find_next_sibling()
             while next_tag and next_tag.name not in ['h3', 'h4', 'div', 'h5']:
                 etymology_tag = next_tag
                 next_tag = next_tag.find_next_sibling()
                 if etymology_tag.name == 'p':
-                    # added this to the original code to mark terms in italics with { }
                     for item in etymology_tag.contents:
                         if (isinstance(item, NavigableString)):
-                            etymology_text += item
+                            etymology_text['text'] += item
+                            item_tag = {
+                                'text': item
+                            }
+                            etymology_text['map'].append(item_tag)
                         else:
-                            if (item.name == 'i' or (item.name == 'span' and 'mention-tr' in item.attrs['class'])):
-                                etymology_text += '{' + item.text + '}'
-                            else:
-                                etymology_text += item.text
-                    # end of added code - original code below
-                    # etymology_text += etymology_tag.text
+                            etymology_text['text'] += item.text
+                            item_tag = {
+                                'text': item.text,
+                                'name': item.name
+                            }
+                            if ('class' in item.attrs):
+                                item_tag['class'] = item.attrs['class']
+                            if ('lang' in item.attrs):
+                                item_tag['lang'] = item.attrs['lang']
+                            etymology_text['map'].append(item_tag)
                 else:
                     for list_tag in etymology_tag.find_all('li'):
-                        etymology_text += list_tag.text + '\n'
+                        etymology_text['text'] += list_tag.text + '\n'
             etymology_list.append((etymology_index, etymology_text))
         return etymology_list
 
@@ -244,7 +274,11 @@ class WiktionaryParser(object):
         relation_id_list = self.get_id_list(word_contents, 'related')
         related_words_list = []
         for related_index, related_id, relation_type in relation_id_list:
-            words = []
+            # words = []
+            words = {
+                'text': [],
+                'map': []
+            }
             span_tag = self.soup.find_all('span', {'id': related_id})[0]
             parent_tag = span_tag.parent
             while parent_tag and not parent_tag.find_all('li'):
@@ -254,20 +288,32 @@ class WiktionaryParser(object):
                     # added this to the original code to handle nested lists in descendants
                     if (relation_type == 'descendants'):
                         text = ''
-                        for i in list_tag.contents:
-                            if (i.name in ['ul', 'ol', 'dl']):
-                                continue
-                            if (isinstance(i, NavigableString)):
-                                text += i
+                        word_map = []
+                        for item in list_tag.contents:
+                            if (item.name in ['ul', 'ol', 'dl']):
+                                continue 
+                            if (isinstance(item, NavigableString)):
+                                text += item
                             else:
-                                if ('lang' in i.attrs):
-                                    text += '{' + i.text + '}'
+                                if ('lang' in item.attrs or 'title' in item.attrs):
+                                    text += '{' + item.text + '}'
+                                    item_tag = {
+                                        'text': item.text,
+                                        'name': item.name,
+                                        'class': item.attrs['class']
+                                    }
+                                    if ('lang' in item.attrs):
+                                        item_tag['lang'] = item.attrs['lang']
+                                    if ('title' in item.attrs):
+                                        item_tag['title'] = item.attrs['title']
+                                    word_map.append(item_tag)
                                 else:
-                                    text += i.text
-                        words.append(text)
+                                    text += item.text
+                        words['text'].append(text)
+                        words['map'].append(word_map)
                     else:
                     # end of added code
-                        words.append(list_tag.text)
+                        words['text'].append(list_tag.text)
             related_words_list.append((related_index, words, relation_type))
         return related_words_list
 
