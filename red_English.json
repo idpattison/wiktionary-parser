@@ -1,0 +1,299 @@
+[
+    {
+        "key": "red#en#1",
+        "word": "red",
+        "language": "English",
+        "lang-code": "en",
+        "variant": 1,
+        "meaning": "red",
+        "pronunciation": {
+            "phonemic": {
+                "enPR": "/ɹɛd/"
+            },
+            "phonetic": {}
+        },
+        "forms": [
+            {
+                "part-of-speech": "adjective",
+                "gender": "none",
+                "definitions": [
+                    "red (comparative redder, superlative reddest)",
+                    "Having red as its color.",
+                    "(of hair) Having an orange-brown or orange-blond colour; ginger.",
+                    "(card games, of a card) Of the hearts or diamonds suits. Compare black (“of the spades or clubs suits”)",
+                    "(often capitalized) Supportive of, related to, or dominated by a political party or movement represented by the color red:",
+                    "(chiefly derogatory, offensive) Amerind; relating to Amerindians or First Nations",
+                    "(astronomy) Of the lower-frequency region of the (typically visible) part of the electromagnetic spectrum which is relevant in the specific observation.",
+                    "(particle physics) Having a color charge of red."
+                ],
+                "inflections": {
+                    "comparative": "redder",
+                    "superlative": "reddest"
+                }
+            },
+            {
+                "part-of-speech": "noun",
+                "gender": "none",
+                "definitions": [
+                    "red (countable and uncountable, plural reds)",
+                    "(countable and uncountable) Any of a range of colours having the longest wavelengths, 670 nm, of the visible spectrum; a primary additive colour for transmitted light: the colour obtained by subtracting green and blue from white light using magenta and yellow filters; the colour of blood, ripe strawberries, etc.",
+                    "(countable) A revolutionary socialist or (most commonly) a Communist; (usually capitalized) a Bolshevik, a supporter of the Bolsheviks in the Russian Civil War.",
+                    "(countable, snooker) One of the 15 red balls used in snooker, distinguished from the colours.",
+                    "(countable and uncountable) Red wine.",
+                    "(countable, informal, Britain, birdwatching) A redshank.",
+                    "(derogatory, offensive) An Amerind.",
+                    "(slang) The drug secobarbital; a capsule of this drug.",
+                    "(informal) A red light (a traffic signal)",
+                    "(Ireland, Britain, beverages, informal) red lemonade",
+                    "(particle physics) One of the three color charges for quarks.",
+                    "(US, colloquial, uncountable) chili con carne (usually in the phrase \"bowl of red\")",
+                    "(informal) The redfish or red drum, Sciaenops ocellatus, a fish with reddish fins and scales."
+                ],
+                "inflections": {
+                    "plural": "reds"
+                }
+            }
+        ],
+        "etymology": "From Middle English red, from Old English rēad, from Proto-West Germanic *raud, from Proto-Germanic *raudaz (compare West Frisian read, Low German root, rod, Dutch rood, German rot, Danish and Norwegian Bokmål rød, Norwegian Nynorsk raud), from Proto-Indo-European *h₁rowdʰós, from the root *h₁rewdʰ- (compare Welsh rhudd, Latin ruber, rufus, Tocharian A rtär, Tocharian B ratre, Ancient Greek ἐρυθρός (eruthrós), Albanian pruth (“redhead”), Old Church Slavonic рудъ (rudŭ), Czech rudý, Lithuanian raúdas, Avestan 𐬭𐬀𐬊𐬌𐬛𐬌𐬙𐬀‎ (raoidita), Sanskrit रुधिर (rudhirá, “red, bloody”)).\n",
+        "ancestors": [
+            {
+                "word": "red",
+                "lang-code": "enm",
+                "meaning": "red",
+                "language": "Middle English"
+            },
+            {
+                "word": "rēad",
+                "lang-code": "ang",
+                "meaning": "red",
+                "language": "Old English"
+            },
+            {
+                "word": "*raud",
+                "lang-code": "gmw-pro",
+                "meaning": "red",
+                "language": "Proto-West Germanic"
+            },
+            {
+                "word": "*raudaz",
+                "lang-code": "gem-pro",
+                "meaning": "red",
+                "language": "Proto-Germanic"
+            },
+            {
+                "word": "*h₁rowdʰós",
+                "lang-code": "ine-pro",
+                "meaning": "red",
+                "language": "Proto-Indo-European"
+            },
+            {
+                "word": "*h₁rewdʰ-",
+                "lang-code": "ine-pro",
+                "meaning": "red",
+                "language": "Proto-Indo-European"
+            }
+        ],
+        "descendants": [],
+        "cognates": [
+            {
+                "word": "read",
+                "lang-code": "fy",
+                "meaning": "red",
+                "language": "West Frisian"
+            },
+            {
+                "word": "root",
+                "lang-code": "nds",
+                "meaning": "red",
+                "language": "Low German"
+            },
+            {
+                "word": "rod",
+                "lang-code": "nds",
+                "meaning": "red",
+                "language": "Low German"
+            },
+            {
+                "word": "rood",
+                "lang-code": "nl",
+                "meaning": "red",
+                "language": "Dutch"
+            },
+            {
+                "word": "rot",
+                "lang-code": "de",
+                "meaning": "red",
+                "language": "German"
+            },
+            {
+                "word": "rød",
+                "lang-code": "nb",
+                "meaning": "red",
+                "language": "Norwegian Bokmål"
+            },
+            {
+                "word": "raud",
+                "lang-code": "nn",
+                "meaning": "red",
+                "language": "Norwegian Nynorsk"
+            },
+            {
+                "word": "rhudd",
+                "lang-code": "cy",
+                "meaning": "red",
+                "language": "Welsh"
+            },
+            {
+                "word": "ruber",
+                "lang-code": "la",
+                "meaning": "red",
+                "language": "Latin"
+            },
+            {
+                "word": "rufus",
+                "lang-code": "la",
+                "meaning": "red",
+                "language": "Latin"
+            },
+            {
+                "word": "rtär",
+                "lang-code": "xto",
+                "meaning": "red",
+                "language": "Tocharian A"
+            },
+            {
+                "word": "ratre",
+                "lang-code": "txb",
+                "meaning": "red",
+                "language": "Tocharian B"
+            },
+            {
+                "word": "ἐρυθρός",
+                "lang-code": "grc",
+                "meaning": "red",
+                "language": "Ancient Greek",
+                "latin-form": "eruthrós"
+            },
+            {
+                "word": "pruth",
+                "lang-code": "sq",
+                "meaning": "redhead",
+                "language": "Albanian"
+            },
+            {
+                "word": "рудъ",
+                "lang-code": "cu",
+                "meaning": "red",
+                "language": "Old Church Slavonic",
+                "latin-form": "rudŭ"
+            },
+            {
+                "word": "rudý",
+                "lang-code": "cs",
+                "meaning": "red",
+                "language": "Czech"
+            },
+            {
+                "word": "raúdas",
+                "lang-code": "lt",
+                "meaning": "red",
+                "language": "Lithuanian"
+            },
+            {
+                "word": "𐬭𐬀𐬊𐬌𐬛𐬌𐬙𐬀",
+                "lang-code": "ae",
+                "meaning": "red",
+                "language": "Avestan",
+                "latin-form": "raoidita"
+            },
+            {
+                "word": "रुधिर",
+                "lang-code": "sa",
+                "meaning": "red, bloody",
+                "language": "Sanskrit",
+                "latin-form": "rudhirá"
+            }
+        ],
+        "parent": {
+            "word": "red",
+            "lang-code": "enm",
+            "meaning": "red",
+            "language": "Middle English"
+        }
+    },
+    {
+        "key": "red#en#2",
+        "word": "red",
+        "language": "English",
+        "lang-code": "en",
+        "variant": 2,
+        "meaning": "red",
+        "pronunciation": {
+            "phonemic": {
+                "enPR": "/ɹɛd/"
+            },
+            "phonetic": {}
+        },
+        "forms": [
+            {
+                "part-of-speech": "verb",
+                "gender": "none",
+                "definitions": [
+                    "red",
+                    "(archaic) simple past tense and past participle of rede"
+                ],
+                "inflections": {}
+            }
+        ],
+        "etymology": "From the archaic verb rede.\n",
+        "ancestors": [
+            {
+                "word": "rede",
+                "lang-code": "en",
+                "meaning": "red",
+                "language": "English"
+            }
+        ],
+        "descendants": [],
+        "cognates": [],
+        "parent": {
+            "word": "rede",
+            "lang-code": "en",
+            "meaning": "red",
+            "language": "English"
+        }
+    },
+    {
+        "key": "red#en#3",
+        "word": "red",
+        "language": "English",
+        "lang-code": "en",
+        "variant": 3,
+        "meaning": "red",
+        "pronunciation": {
+            "phonemic": {
+                "enPR": "/ɹɛd/"
+            },
+            "phonetic": {}
+        },
+        "forms": [
+            {
+                "part-of-speech": "verb",
+                "gender": "none",
+                "definitions": [
+                    "red (third-person singular simple present reds, present participle redding, simple past and past participle redded)",
+                    "Alternative spelling of redd"
+                ],
+                "inflections": {
+                    "third-person singular simple present": "reds",
+                    "present participle": "redding",
+                    "simple past and past participle": "redded"
+                }
+            }
+        ],
+        "etymology": "",
+        "ancestors": [],
+        "descendants": [],
+        "cognates": []
+    }
+]

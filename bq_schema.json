@@ -1,0 +1,80 @@
+[
+ {
+   "description": "the unique key for this word-language-variant combination",
+   "name": "key",
+   "type": "STRING",
+   "mode": "REQUIRED"
+ },
+ {
+   "description": "the actual word",
+   "name": "word",
+   "type": "STRING",
+   "mode": "REQUIRED"
+ },
+ {
+   "description": "the language which has this word",
+   "name": "language",
+   "type": "STRING",
+   "mode": "REQUIRED"
+ },
+ {
+   "description": "the code for the language which has this word",
+   "name": "lang_code",
+   "type": "STRING",
+   "mode": "REQUIRED"
+ },
+ {
+   "description": "the variant number to distinguish between different words with the same spelling (e.g. bear/bear)",
+   "name": "variant",
+   "type": "INTEGER",
+   "mode": "NULLABLE"
+ },
+ {
+   "description": "the meaning of this word; also called a gloss",
+   "name": "meaning",
+   "type": "STRING",
+   "mode": "NULLABLE"
+ },
+ {
+   "description": "the IPA pronunciation of the word, if available",
+   "name": "pronunciation",
+   "type": "STRING",
+   "mode": "NULLABLE"
+ },
+ {
+    "description": "the Latinised form of a word in a non-Latin script",
+    "name": "latin_form",
+    "type": "STRING",
+    "mode": "NULLABLE"
+    },
+ {
+    "description": "whether this is a full definition of the word (True) or just a partial definition (False)",
+    "name": "full_definition",
+    "type": "BOOLEAN",
+    "mode": "REQUIRED"
+    },
+ {
+    "description": "the unique key for the word's parent, if available",
+    "name": "parent_key",
+    "type": "STRING",
+    "mode": "NULLABLE"
+    },
+ {
+    "description": "the core word which this word relates to",
+    "name": "core_word",
+    "type": "STRING",
+    "mode": "REQUIRED"
+    },
+ {
+    "description": "the unique key for the core word",
+    "name": "core_word_key",
+    "type": "STRING",
+    "mode": "REQUIRED"
+    },
+ {
+    "description": "the relationship to the core word - core, ancestor, descendant or cognate",
+    "name": "relation_to_core_word",
+    "type": "STRING",
+    "mode": "REQUIRED"
+    }
+]

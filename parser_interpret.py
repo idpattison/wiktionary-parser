@@ -26,7 +26,7 @@ def start(start_words, debug_mode, passed_filename):
         if (len(start_words) == 1):
             filename = (start_words[0]['word'] + '_' + start_words[0]['language'] + '.json').replace(' ', '_')
         else:
-            filename = 'multiple_' + datetime.now().strftime('%Y-%m-%d-%H:%M:%S.%f') + '.json'
+            filename = 'words_to_upload_' + datetime.now().strftime('%Y-%m-%d-%H:%M:%S.%f') + '.json'
     else:
         filename = passed_filename
 
@@ -63,15 +63,21 @@ def start(start_words, debug_mode, passed_filename):
 
             word = word_data[v] # NB variant is 0-based but we want to show variants 1, 2, 3...
             variant = v + 1
+
+            if (len(word['definitions'][0]['text']['map']) > 0 and 'lang' in word['definitions'][0]['text']['map'][0]):
+                lang_code = word['definitions'][0]['text']['map'][0]['lang']
+            else:
+                lang_code = 'xx'
             
             # define the new word structure
             new_word = { 
-                        'key': (s['word'] + '#' + s['language'] + '#' + str(variant)).replace(' ', '_'),
+                        'key': (s['word'] + '#' + lang_code + '#' + str(variant)).replace(' ', '_'),
                         'word': s['word'],
                         'language': s['language'],
+                        'lang-code': lang_code,
                         'variant': variant,
                         'meaning': s['meaning'],
-                        'ipa': { 'phonemic': {}, 'phonetic': {} },
+                        'pronunciation': { 'phonemic': {}, 'phonetic': {} },
                         'forms': [],
                         'etymology': word['etymology']['text'].replace('{', '').replace('}', ''),
                         'ancestors': [],
@@ -108,11 +114,11 @@ def start(start_words, debug_mode, passed_filename):
                     if ('/' in ipa_form):
                         slash1 = ipa_form.index('/')
                         slash2 = ipa_form.index('/', slash1 + 1)
-                        new_word['ipa']['phonemic'][ipa_type] = ipa_form[slash1 : slash2 + 1]
+                        new_word['pronunciation']['phonemic'][ipa_type] = ipa_form[slash1 : slash2 + 1]
                     if ('[' in ipa_form):
                         bracket1 = ipa_form.index('[')
                         bracket2 = ipa_form.index(']', bracket1 + 1)
-                        new_word['ipa']['phonetic'][ipa_type] = ipa_form[bracket1 : bracket2 + 1]
+                        new_word['pronunciation']['phonetic'][ipa_type] = ipa_form[bracket1 : bracket2 + 1]
 
             # parse the etymology and interpret the structure
             parseEtymology(word['etymology']['map'], new_word, debug_mode)
