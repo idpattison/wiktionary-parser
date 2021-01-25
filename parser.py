@@ -15,6 +15,8 @@ def main():
     # parser --words words.json     (file holds a list of words to parse)
     # --> also use -l -m -v -d -f -w
 
+    # NB variant is now deprecated - we will return all variants of the word in the given language
+
     start_words = []
     filename = ''
     debug_mode = False

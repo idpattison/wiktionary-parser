@@ -1,0 +1,581 @@
+[
+    {
+        "key": "red#English#1",
+        "word": "red",
+        "language": "English",
+        "variant": 1,
+        "meaning": "red",
+        "ipa": {
+            "phonemic": {
+                "enPR": "/ɹɛd/"
+            },
+            "phonetic": {}
+        },
+        "forms": [
+            {
+                "part-of-speech": "adjective",
+                "gender": "none",
+                "definitions": [
+                    "red (comparative redder, superlative reddest)",
+                    "Having red as its color.",
+                    "(of hair) Having an orange-brown or orange-blond colour; ginger.",
+                    "(card games, of a card) Of the hearts or diamonds suits. Compare black (“of the spades or clubs suits”)",
+                    "(often capitalized) Supportive of, related to, or dominated by a political party or movement represented by the color red:",
+                    "(chiefly derogatory, offensive) Amerind; relating to Amerindians or First Nations",
+                    "(astronomy) Of the lower-frequency region of the (typically visible) part of the electromagnetic spectrum which is relevant in the specific observation.",
+                    "(particle physics) Having a color charge of red."
+                ],
+                "inflections": {
+                    "comparative": "redder",
+                    "superlative": "reddest"
+                }
+            },
+            {
+                "part-of-speech": "noun",
+                "gender": "none",
+                "definitions": [
+                    "red (countable and uncountable, plural reds)",
+                    "(countable and uncountable) Any of a range of colours having the longest wavelengths, 670 nm, of the visible spectrum; a primary additive colour for transmitted light: the colour obtained by subtracting green and blue from white light using magenta and yellow filters; the colour of blood, ripe strawberries, etc.",
+                    "(countable) A revolutionary socialist or (most commonly) a Communist; (usually capitalized) a Bolshevik, a supporter of the Bolsheviks in the Russian Civil War.",
+                    "(countable, snooker) One of the 15 red balls used in snooker, distinguished from the colours.",
+                    "(countable and uncountable) Red wine.",
+                    "(countable, informal, Britain, birdwatching) A redshank.",
+                    "(derogatory, offensive) An Amerind.",
+                    "(slang) The drug secobarbital; a capsule of this drug.",
+                    "(informal) A red light (a traffic signal)",
+                    "(Ireland, Britain, beverages, informal) red lemonade",
+                    "(particle physics) One of the three color charges for quarks.",
+                    "(US, colloquial, uncountable) chili con carne (usually in the phrase \"bowl of red\")",
+                    "(informal) The redfish or red drum, Sciaenops ocellatus, a fish with reddish fins and scales."
+                ],
+                "inflections": {
+                    "plural": "reds"
+                }
+            }
+        ],
+        "etymology": "From Middle English red, from Old English rēad, from Proto-West Germanic *raud, from Proto-Germanic *raudaz (compare West Frisian read, Low German root, rod, Dutch rood, German rot, Danish and Norwegian Bokmål rød, Norwegian Nynorsk raud), from Proto-Indo-European *h₁rowdʰós, from the root *h₁rewdʰ- (compare Welsh rhudd, Latin ruber, rufus, Tocharian A rtär, Tocharian B ratre, Ancient Greek ἐρυθρός (eruthrós), Albanian pruth (“redhead”), Old Church Slavonic рудъ (rudŭ), Czech rudý, Lithuanian raúdas, Avestan 𐬭𐬀𐬊𐬌𐬛𐬌𐬙𐬀‎ (raoidita), Sanskrit रुधिर (rudhirá, “red, bloody”)).\n",
+        "ancestors": [
+            {
+                "word": "red",
+                "lang-code": "enm",
+                "meaning": "red",
+                "language": "Middle English"
+            },
+            {
+                "word": "rēad",
+                "lang-code": "ang",
+                "meaning": "red",
+                "language": "Old English"
+            },
+            {
+                "word": "*raud",
+                "lang-code": "gmw-pro",
+                "meaning": "red",
+                "language": "Proto-West Germanic"
+            },
+            {
+                "word": "*raudaz",
+                "lang-code": "gem-pro",
+                "meaning": "red",
+                "language": "Proto-Germanic"
+            },
+            {
+                "word": "*h₁rowdʰós",
+                "lang-code": "ine-pro",
+                "meaning": "red",
+                "language": "Proto-Indo-European"
+            },
+            {
+                "word": "*h₁rewdʰ-",
+                "lang-code": "ine-pro",
+                "meaning": "red",
+                "language": "Proto-Indo-European"
+            }
+        ],
+        "descendants": [],
+        "cognates": [
+            {
+                "word": "read",
+                "lang-code": "fy",
+                "meaning": "red",
+                "language": "West Frisian"
+            },
+            {
+                "word": "root",
+                "lang-code": "nds",
+                "meaning": "red",
+                "language": "Low German"
+            },
+            {
+                "word": "rod",
+                "lang-code": "nds",
+                "meaning": "red",
+                "language": "Low German"
+            },
+            {
+                "word": "rood",
+                "lang-code": "nl",
+                "meaning": "red",
+                "language": "Dutch"
+            },
+            {
+                "word": "rot",
+                "lang-code": "de",
+                "meaning": "red",
+                "language": "German"
+            },
+            {
+                "word": "rød",
+                "lang-code": "nb",
+                "meaning": "red",
+                "language": "Norwegian Bokmål"
+            },
+            {
+                "word": "raud",
+                "lang-code": "nn",
+                "meaning": "red",
+                "language": "Norwegian Nynorsk"
+            },
+            {
+                "word": "rhudd",
+                "lang-code": "cy",
+                "meaning": "red",
+                "language": "Welsh"
+            },
+            {
+                "word": "ruber",
+                "lang-code": "la",
+                "meaning": "red",
+                "language": "Latin"
+            },
+            {
+                "word": "rufus",
+                "lang-code": "la",
+                "meaning": "red",
+                "language": "Latin"
+            },
+            {
+                "word": "rtär",
+                "lang-code": "xto",
+                "meaning": "red",
+                "language": "Tocharian A"
+            },
+            {
+                "word": "ratre",
+                "lang-code": "txb",
+                "meaning": "red",
+                "language": "Tocharian B"
+            },
+            {
+                "word": "ἐρυθρός",
+                "lang-code": "grc",
+                "meaning": "red",
+                "language": "Ancient Greek",
+                "latin-form": "eruthrós"
+            },
+            {
+                "word": "pruth",
+                "lang-code": "sq",
+                "meaning": "redhead",
+                "language": "Albanian"
+            },
+            {
+                "word": "рудъ",
+                "lang-code": "cu",
+                "meaning": "red",
+                "language": "Old Church Slavonic",
+                "latin-form": "rudŭ"
+            },
+            {
+                "word": "rudý",
+                "lang-code": "cs",
+                "meaning": "red",
+                "language": "Czech"
+            },
+            {
+                "word": "raúdas",
+                "lang-code": "lt",
+                "meaning": "red",
+                "language": "Lithuanian"
+            },
+            {
+                "word": "𐬭𐬀𐬊𐬌𐬛𐬌𐬙𐬀",
+                "lang-code": "ae",
+                "meaning": "red",
+                "language": "Avestan",
+                "latin-form": "raoidita"
+            },
+            {
+                "word": "रुधिर",
+                "lang-code": "sa",
+                "meaning": "red, bloody",
+                "language": "Sanskrit",
+                "latin-form": "rudhirá"
+            }
+        ],
+        "parent": {
+            "word": "red",
+            "lang-code": "enm",
+            "meaning": "red",
+            "language": "Middle English"
+        }
+    },
+    {
+        "key": "red#English#2",
+        "word": "red",
+        "language": "English",
+        "variant": 2,
+        "meaning": "red",
+        "ipa": {
+            "phonemic": {
+                "enPR": "/ɹɛd/"
+            },
+            "phonetic": {}
+        },
+        "forms": [
+            {
+                "part-of-speech": "verb",
+                "gender": "none",
+                "definitions": [
+                    "red",
+                    "(archaic) simple past tense and past participle of rede"
+                ],
+                "inflections": {}
+            }
+        ],
+        "etymology": "From the archaic verb rede.\n",
+        "ancestors": [
+            {
+                "word": "rede",
+                "lang-code": "en",
+                "meaning": "red",
+                "language": "English"
+            }
+        ],
+        "descendants": [],
+        "cognates": [],
+        "parent": {
+            "word": "rede",
+            "lang-code": "en",
+            "meaning": "red",
+            "language": "English"
+        }
+    },
+    {
+        "key": "red#English#3",
+        "word": "red",
+        "language": "English",
+        "variant": 3,
+        "meaning": "red",
+        "ipa": {
+            "phonemic": {
+                "enPR": "/ɹɛd/"
+            },
+            "phonetic": {}
+        },
+        "forms": [
+            {
+                "part-of-speech": "verb",
+                "gender": "none",
+                "definitions": [
+                    "red (third-person singular simple present reds, present participle redding, simple past and past participle redded)",
+                    "Alternative spelling of redd"
+                ],
+                "inflections": {
+                    "third-person singular simple present": "reds",
+                    "present participle": "redding",
+                    "simple past and past participle": "redded"
+                }
+            }
+        ],
+        "etymology": "",
+        "ancestors": [],
+        "descendants": [],
+        "cognates": []
+    },
+    {
+        "key": "blue#English#1",
+        "word": "blue",
+        "language": "English",
+        "variant": 1,
+        "meaning": "blue",
+        "ipa": {
+            "phonemic": {
+                "enPR": "/bluː/",
+                "(Wales) IPA": "/blɪʊ̯/",
+                "(General American) IPA": "/blu/",
+                "(obsolete) enPR": "/bljuː/"
+            },
+            "phonetic": {}
+        },
+        "forms": [
+            {
+                "part-of-speech": "adjective",
+                "gender": "none",
+                "definitions": [
+                    "blue (comparative bluer, superlative bluest)",
+                    "Having blue as its color.",
+                    "(informal) Depressed, melancholic, sad.",
+                    "Pale, without redness or glare; said of a flame.",
+                    "(politics) Supportive of, run by (a member of), pertaining to, or dominated by a political party represented by the colour blue.",
+                    "(astronomy) Of the higher-frequency region of the part of the electromagnetic spectrum which is relevant in the specific observation.",
+                    "(of steak) Extra rare; left very raw and cold.",
+                    "(of a dog or cat) Having a coat of fur of a slaty gray shade.",
+                    "(archaic) Severe or overly strict in morals; gloomy.",
+                    "(archaic, of women) literary; bluestockinged.",
+                    "(particle physics) Having a color charge of blue.",
+                    "(entertainment) Risque or obscene"
+                ],
+                "inflections": {
+                    "comparative": "bluer",
+                    "superlative": "bluest"
+                }
+            },
+            {
+                "part-of-speech": "noun",
+                "gender": "none",
+                "definitions": [
+                    "blue (countable and uncountable, plural blues)",
+                    "(countable and uncountable) The colour of the clear sky or the deep sea, between green and violet in the visible spectrum, and one of the primary additive colours for transmitted light; the colour obtained by subtracting red and green from white light using magenta and cyan filters; or any colour resembling this.",
+                    "Anything coloured blue, especially to distinguish it from similar objects differing only in color.",
+                    "A blue dye or pigment.",
+                    "Blue clothing.",
+                    "The sky, literally or figuratively.",
+                    "The ocean; deep waters.",
+                    "The far distance; a remote or distant place.",
+                    "A dog or cat with a slaty gray coat.",
+                    "(snooker) One of the colour balls used in snooker, with a value of five points.",
+                    "(entomology) Any of the butterflies of the subfamily Polyommatinae in the family Lycaenidae, most of which have blue on their wings.",
+                    "A bluefish.",
+                    "(Australia, colloquial) An argument.",
+                    "A liquid with an intense blue colour, added to a laundry wash to prevent yellowing of white clothes.",
+                    "Any of several processes to protect metal against rust.",
+                    "(Britain) A type of firecracker.",
+                    "(particle physics) One of the three color charges for quarks.",
+                    "(Britain) A member or supporter of the Conservative Party."
+                ],
+                "inflections": {
+                    "plural": "blues"
+                }
+            },
+            {
+                "part-of-speech": "verb",
+                "gender": "none",
+                "definitions": [
+                    "blue (third-person singular simple present blues, present participle blueing or bluing, simple past and past participle blued)",
+                    "(ergative) To make or become blue.",
+                    "(transitive, metallurgy) To treat the surface of steel so that it is passivated chemically and becomes more resistant to rust.",
+                    "(transitive, laundry) To brighten by treating with blue (laundry aid)",
+                    "(transitive, slang, dated) To spend (money) extravagantly; to blow."
+                ],
+                "inflections": {
+                    "third-person singular simple present": "blues",
+                    "present participle": "blueing",
+                    "simple past and past participle": "blued"
+                }
+            }
+        ],
+        "etymology": "From Middle English blewe, from Anglo-Norman blew (“blue”), from Frankish *blāu (“blue”) (perhaps through a Medieval Latin blāvus, blāvius (“blue”)), from Proto-Germanic *blēwaz (“blue, dark blue”), from Proto-Indo-European *bʰlēw- (“yellow, blond, grey”). Cognate with dialectal English blow (“blue”), Scots blue, blew (“blue”), North Frisian bla, blö (“blue”), Saterland Frisian blau (“blue”), Dutch blauw (“blue”), German blau (“blue”), Danish, Norwegian and Swedish blå (“blue”), Icelandic blár (“blue”), Latin flāvus (“yellow”), Middle Irish blá (“yellow”). Doublet of blae.\n",
+        "ancestors": [
+            {
+                "word": "blewe",
+                "lang-code": "enm",
+                "meaning": "blue",
+                "language": "Middle English"
+            },
+            {
+                "word": "blew",
+                "lang-code": "fro",
+                "meaning": "blue",
+                "language": "Old French"
+            },
+            {
+                "word": "*blāu",
+                "lang-code": "gmw-pro",
+                "meaning": "blue",
+                "language": "Proto-West Germanic"
+            },
+            {
+                "word": "blāvus",
+                "lang-code": "la",
+                "meaning": "blue",
+                "uncertain": true,
+                "language": "Latin"
+            },
+            {
+                "word": "*blēwaz",
+                "lang-code": "gem-pro",
+                "meaning": "blue, dark blue",
+                "language": "Proto-Germanic"
+            },
+            {
+                "word": "*bʰlēw-",
+                "lang-code": "ine-pro",
+                "meaning": "yellow, blond, grey",
+                "language": "Proto-Indo-European"
+            }
+        ],
+        "descendants": [
+            {
+                "word": "blu",
+                "lang-code": "tpi",
+                "meaning": "blue",
+                "language": "Tok Pisin"
+            },
+            {
+                "word": "bulu",
+                "lang-code": "hif",
+                "meaning": "blue",
+                "loan-word": true,
+                "language": "Fiji Hindi"
+            },
+            {
+                "word": "bhuluu",
+                "lang-code": "sn",
+                "meaning": "blue",
+                "loan-word": true,
+                "language": "Shona"
+            },
+            {
+                "word": "buluug",
+                "lang-code": "so",
+                "meaning": "blue",
+                "loan-word": true,
+                "language": "Somali"
+            },
+            {
+                "word": "bluu",
+                "lang-code": "sw",
+                "meaning": "blue",
+                "loan-word": true,
+                "language": "Swahili"
+            },
+            {
+                "word": "buluu",
+                "lang-code": "sw",
+                "meaning": "blue",
+                "language": "Swahili"
+            }
+        ],
+        "cognates": [
+            {
+                "word": "blāvius",
+                "lang-code": "la",
+                "meaning": "blue",
+                "language": "Latin"
+            },
+            {
+                "word": "blow",
+                "lang-code": "en",
+                "meaning": "blue",
+                "language": "English"
+            },
+            {
+                "word": "blue",
+                "lang-code": "sco",
+                "meaning": "blue",
+                "language": "Scots"
+            },
+            {
+                "word": "blew",
+                "lang-code": "sco",
+                "meaning": "blue",
+                "language": "Scots"
+            },
+            {
+                "word": "bla",
+                "lang-code": "frr",
+                "meaning": "blue",
+                "language": "North Frisian"
+            },
+            {
+                "word": "blö",
+                "lang-code": "frr",
+                "meaning": "blue",
+                "language": "North Frisian"
+            },
+            {
+                "word": "blau",
+                "lang-code": "stq",
+                "meaning": "blue",
+                "language": "Saterland Frisian"
+            },
+            {
+                "word": "blauw",
+                "lang-code": "nl",
+                "meaning": "blue",
+                "language": "Dutch"
+            },
+            {
+                "word": "blau",
+                "lang-code": "de",
+                "meaning": "blue",
+                "language": "German"
+            },
+            {
+                "word": "blå",
+                "lang-code": "sv",
+                "meaning": "blue",
+                "language": "Swedish"
+            },
+            {
+                "word": "blár",
+                "lang-code": "is",
+                "meaning": "blue",
+                "language": "Icelandic"
+            },
+            {
+                "word": "flāvus",
+                "lang-code": "la",
+                "meaning": "yellow",
+                "language": "Latin"
+            },
+            {
+                "word": "blá",
+                "lang-code": "mga",
+                "meaning": "yellow",
+                "language": "Middle Irish"
+            }
+        ],
+        "parent": {
+            "word": "blewe",
+            "lang-code": "enm",
+            "meaning": "blue",
+            "language": "Middle English"
+        }
+    },
+    {
+        "key": "blue#English#2",
+        "word": "blue",
+        "language": "English",
+        "variant": 2,
+        "meaning": "blue",
+        "ipa": {
+            "phonemic": {
+                "enPR": "/bluː/",
+                "(Wales) IPA": "/blɪʊ̯/",
+                "(General American) IPA": "/blu/",
+                "(obsolete) enPR": "/bljuː/"
+            },
+            "phonetic": {}
+        },
+        "forms": [
+            {
+                "part-of-speech": "adjective",
+                "gender": "none",
+                "definitions": [
+                    "blue (comparative more blue, superlative most blue)",
+                    "(entertainment, informal) Pornographic or profane."
+                ],
+                "inflections": {
+                    "comparative": "more blue",
+                    "superlative": "most blue"
+                }
+            }
+        ],
+        "etymology": "From the color of the envelopes used to contain missives of the censors and managers to vaudevillian performers on objectionable material from their acts that needed to be excised. (Can this(+) etymology be sourced?)",
+        "ancestors": [],
+        "descendants": [],
+        "cognates": []
+    }
+]

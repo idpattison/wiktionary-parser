@@ -2,6 +2,7 @@ import json
 import re
 import sys
 import string
+from datetime import datetime
 from wiktionary_languages import * 
 from nltk.tokenize import word_tokenize
 from parser_core import WiktionaryParser
@@ -11,25 +12,30 @@ ancestor = ['from', 'derived', 'through', '<']
 cognate = ['cognate', 'cognates', 'compare', 'compares', 'related', 'cf', 'cf.']
 uncertain = ['possible', 'possibly', 'probable', 'probably', 'maybe', 'perhaps']
 loan = ['borrowed', '→']
-root = ['root', 'stem']
 exclusions = ['and', 'the', 'a', 'or']
 
 filename = ''
 
 def start(start_words, debug_mode, passed_filename):
 
-    for s in start_words:
-        # set the filename (or use '' for print to screen)
-        global filename
-        if (passed_filename == ''):
-            filename = (s['word'] + '_' + s['language'] + '_' + str(s['variant']) + '.txt').replace(' ', '_')
+    all_words = []
+
+    # set the filename (or use '' for print to screen)
+    global filename
+    if (passed_filename == ''):
+        if (len(start_words) == 1):
+            filename = (start_words[0]['word'] + '_' + start_words[0]['language'] + '.json').replace(' ', '_')
         else:
-            filename = passed_filename
+            filename = 'multiple_' + datetime.now().strftime('%Y-%m-%d-%H:%M:%S.%f') + '.json'
+    else:
+        filename = passed_filename
 
-        # create (or re-create) the file if we have a filename, otherwise write to screen
-        if (filename != ''):
-            open(filename, 'w')
+    # create (or re-create) the file if we have a filename, otherwise write to screen
+    if (filename != ''):
+        open(filename, 'w')
 
+
+    for s in start_words:
         # meaning defaults to the core word
         if ('meaning' not in s):
             s['meaning'] = s['word']
@@ -44,7 +50,7 @@ def start(start_words, debug_mode, passed_filename):
 
         # if the word is not in Wiktionary, print the error and continue to the next word
         if (len(word_data) == 0):
-            print_to_file('\nWORD NOT FOUND: ' + word_to_fetch)
+            print('\nWORD NOT FOUND: ' + word_to_fetch + ' (' + s['language'] + ')')
             continue
 
         if (debug_mode == True):
@@ -52,67 +58,73 @@ def start(start_words, debug_mode, passed_filename):
             input_string = json.dumps(word_data, indent=4, ensure_ascii=False).encode('utf8')
             print_to_file(input_string.decode())
 
+        # process each variant of the word in turn
+        for v in range(len(word_data)):
 
-        word = word_data[s['variant'] - 1] # variant is 1-based
-        
-        # define the new word structure
-        new_word = { 
-                    'key': (s['word'] + '#' + s['language'] + '#' + str(s['variant'])).replace(' ', '_'),
-                    'word': s['word'],
-                    'language': s['language'],
-                    'variant': s['variant'],
-                    'meaning': s['meaning'],
-                    'ipa': { 'phonemic': {}, 'phonetic': {} },
-                    'forms': [],
-                    'etymology': word['etymology']['text'].replace('{', '').replace('}', ''),
-                    'ancestors': [],
-                    'descendants': [],
-                    'cognates': []
-        }
-
-        # add all word forms
-        form = 0
-        for d in word['definitions']:
-            word_def = {
-                        'part-of-speech': d['partOfSpeech'],
-                        'gender': 'none',
-                        'definitions': [],
-                        'inflections': {}
+            word = word_data[v] # NB variant is 0-based but we want to show variants 1, 2, 3...
+            variant = v + 1
+            
+            # define the new word structure
+            new_word = { 
+                        'key': (s['word'] + '#' + s['language'] + '#' + str(variant)).replace(' ', '_'),
+                        'word': s['word'],
+                        'language': s['language'],
+                        'variant': variant,
+                        'meaning': s['meaning'],
+                        'ipa': { 'phonemic': {}, 'phonetic': {} },
+                        'forms': [],
+                        'etymology': word['etymology']['text'].replace('{', '').replace('}', ''),
+                        'ancestors': [],
+                        'descendants': [],
+                        'cognates': []
             }
-            for t in d['text']['text']:
-                word_def['definitions'].append(t)
-            new_word['forms'].append(word_def)
 
-            # parse the descendants
-            for rel in d['relatedWords']:
-                if (rel['relationshipType'] == 'descendants'):
-                    parseDescendants(rel['words']['map'], new_word, debug_mode)
+            # add all word forms
+            form = 0
+            for d in word['definitions']:
+                word_def = {
+                            'part-of-speech': d['partOfSpeech'],
+                            'gender': 'none',
+                            'definitions': [],
+                            'inflections': {}
+                }
+                for t in d['text']['text']:
+                    word_def['definitions'].append(t)
+                new_word['forms'].append(word_def)
 
-            # parse the inflections
-            parseInflections(d['text']['map'], new_word, form, debug_mode)
-            form += 1
+                # parse the descendants
+                for rel in d['relatedWords']:
+                    if (rel['relationshipType'] == 'descendants'):
+                        parseDescendants(rel['words']['map'], new_word, debug_mode)
 
-        # parse the IPA
-        for ipa_form in word['pronunciations']['text']:
-            ipa_type = ipa_form.split(':')[0]
-            if (ipa_type not in ['Homophone', 'Homophones', 'Rhyme', 'Rhymes']):
-                if ('/' in ipa_form):
-                    slash1 = ipa_form.index('/')
-                    slash2 = ipa_form.index('/', slash1 + 1)
-                    new_word['ipa']['phonemic'][ipa_type] = ipa_form[slash1 : slash2 + 1]
-                if ('[' in ipa_form):
-                    bracket1 = ipa_form.index('[')
-                    bracket2 = ipa_form.index(']', bracket1 + 1)
-                    new_word['ipa']['phonetic'][ipa_type] = ipa_form[bracket1 : bracket2 + 1]
+                # parse the inflections
+                parseInflections(d['text']['map'], new_word, form, debug_mode)
+                form += 1
 
-        # parse the etymology and interpret the structure
-        parseEtymology(word['etymology']['map'], new_word, debug_mode)
+            # parse the IPA
+            for ipa_form in word['pronunciations']['text']:
+                ipa_type = ipa_form.split(':')[0]
+                if (ipa_type not in ['Homophone', 'Homophones', 'Rhyme', 'Rhymes']):
+                    if ('/' in ipa_form):
+                        slash1 = ipa_form.index('/')
+                        slash2 = ipa_form.index('/', slash1 + 1)
+                        new_word['ipa']['phonemic'][ipa_type] = ipa_form[slash1 : slash2 + 1]
+                    if ('[' in ipa_form):
+                        bracket1 = ipa_form.index('[')
+                        bracket2 = ipa_form.index(']', bracket1 + 1)
+                        new_word['ipa']['phonetic'][ipa_type] = ipa_form[bracket1 : bracket2 + 1]
 
-        # print the new word structure
-        if (debug_mode == True):
-            print_to_file('\nFINAL JSON OUTPUT')
-        json_string = json.dumps(new_word, indent=4, ensure_ascii=False).encode('utf8')
-        print_to_file(json_string.decode())
+            # parse the etymology and interpret the structure
+            parseEtymology(word['etymology']['map'], new_word, debug_mode)
+
+            # add the new word to the list
+            all_words.append(new_word)
+
+    # print the new word structure
+    if (debug_mode == True):
+        print_to_file('\nFINAL JSON OUTPUT')
+    json_string = json.dumps(all_words, indent=4, ensure_ascii=False).encode('utf8')
+    print_to_file(json_string.decode())
 
 
 def parseInflections(inflections_map, word_structure, form, debug_mode):
@@ -173,7 +185,6 @@ def parseEtymology(etymology_map, word_structure, debug_mode):
     mode = 'cognate'  # this is the default mode unless something tells us it's an ancestor word
     uncertain_word = False
     loan_word = False
-    root_form = False
 
     sub_words = []
     debug_string = ''
@@ -200,9 +211,6 @@ def parseEtymology(etymology_map, word_structure, debug_mode):
                 if (t.lower() in loan):
                     loan_word = True
                     debug_string += 'marking as loan word' + ' | '
-                if (t.lower() in root):
-                    root_form = True
-                    debug_string += 'marking as root form' + ' | '
             continue
 
         # if the item is a span block, it's either a Latin form, a gloss, or a language name
@@ -251,8 +259,6 @@ def parseEtymology(etymology_map, word_structure, debug_mode):
                 'meaning': word_structure['meaning'],
                 'mode': mode
             }
-            if (root_form == True):
-                sub_word['root-form'] = True
             if (uncertain_word == True):
                 sub_word['uncertain'] = True
             if (loan_word == True):
@@ -272,7 +278,6 @@ def parseEtymology(etymology_map, word_structure, debug_mode):
             mode = 'cognate'
             uncertain_word = False
             loan_word = False
-            root_form = False
 
         if (debug_mode):
             print_to_file(debug_string)

@@ -267,6 +267,23 @@ class WiktionaryParser(object):
                 else:
                     for list_tag in etymology_tag.find_all('li'):
                         etymology_text['text'] += list_tag.text + '\n'
+                        for item in list_tag.contents:
+                            if (isinstance(item, NavigableString)):
+                                item_tag = {
+                                    'text': item
+                                }
+                                etymology_text['map'].append(item_tag)
+                            else:
+                                item_tag = {
+                                    'text': item.text,
+                                    'name': item.name
+                                }
+                                if ('class' in item.attrs):
+                                    item_tag['class'] = item.attrs['class']
+                                if ('lang' in item.attrs):
+                                    item_tag['lang'] = item.attrs['lang']
+                                etymology_text['map'].append(item_tag)
+
             etymology_list.append((etymology_index, etymology_text))
         return etymology_list
 
