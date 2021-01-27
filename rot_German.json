@@ -1,0 +1,119 @@
+[
+    {
+        "key": "rot#de#1",
+        "word": "rot",
+        "language": "German",
+        "lang-code": "de",
+        "variant": 1,
+        "meaning": "red",
+        "pronunciation": {
+            "phonemic": {
+                "IPA": "/roːt/"
+            },
+            "phonetic": {
+                "IPA": "[ʁoːt(ʰ)]"
+            }
+        },
+        "forms": [
+            {
+                "part-of-speech": "adjective",
+                "gender": "none",
+                "definitions": [
+                    "rot (comparative röter or roter, superlative am rötesten or am rotesten)",
+                    "red (colour)",
+                    "(politics) red; pertaining to Marxism in the widest sense; social democratic; socialist; communist",
+                    "(possibly mildly offensive) red-haired",
+                    "(historical, possibly offensive) redskin; Native American; Indian"
+                ],
+                "inflections": {
+                    "comparative": "röter",
+                    "superlative": "am rötesten"
+                }
+            }
+        ],
+        "etymology": "From Middle High German rōt (“red, red-haired”), from Old High German rōt (“red, scarlet, purple-red, brown-red, yellow-red”), from Proto-Germanic *raudaz, from Proto-Indo-European *h₁rowdʰós, from *h₁rewdʰ-. Compare Low German root, rod, rot, Dutch rood, English red, West Frisian read, Danish rød.\n",
+        "ancestors": [
+            {
+                "word": "rōt",
+                "lang-code": "gmh",
+                "meaning": "red, red-haired",
+                "language": "Middle High German"
+            },
+            {
+                "word": "rōt",
+                "lang-code": "goh",
+                "meaning": "red, scarlet, purple-red, brown-red, yellow-red",
+                "language": "Old High German"
+            },
+            {
+                "word": "*raudaz",
+                "lang-code": "gem-pro",
+                "meaning": "red",
+                "language": "Proto-Germanic"
+            },
+            {
+                "word": "*h₁rowdʰós",
+                "lang-code": "ine-pro",
+                "meaning": "red",
+                "language": "Proto-Indo-European"
+            },
+            {
+                "word": "*h₁rewdʰ-",
+                "lang-code": "ine-pro",
+                "meaning": "red",
+                "language": "Proto-Indo-European"
+            }
+        ],
+        "descendants": [],
+        "cognates": [
+            {
+                "word": "root",
+                "lang-code": "nds",
+                "meaning": "red",
+                "language": "Low German"
+            },
+            {
+                "word": "rod",
+                "lang-code": "nds",
+                "meaning": "red",
+                "language": "Low German"
+            },
+            {
+                "word": "rot",
+                "lang-code": "nds",
+                "meaning": "red",
+                "language": "Low German"
+            },
+            {
+                "word": "rood",
+                "lang-code": "nl",
+                "meaning": "red",
+                "language": "Dutch"
+            },
+            {
+                "word": "red",
+                "lang-code": "en",
+                "meaning": "red",
+                "language": "English"
+            },
+            {
+                "word": "read",
+                "lang-code": "fy",
+                "meaning": "red",
+                "language": "West Frisian"
+            },
+            {
+                "word": "rød",
+                "lang-code": "da",
+                "meaning": "red",
+                "language": "Danish"
+            }
+        ],
+        "parent": {
+            "word": "rōt",
+            "lang-code": "gmh",
+            "meaning": "red, red-haired",
+            "language": "Middle High German"
+        }
+    }
+]

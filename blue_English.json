@@ -1,0 +1,289 @@
+[
+    {
+        "key": "blue#en#1",
+        "word": "blue",
+        "language": "English",
+        "lang-code": "en",
+        "variant": 1,
+        "meaning": "blue",
+        "pronunciation": {
+            "phonemic": {
+                "enPR": "/bluː/",
+                "(Wales) IPA": "/blɪʊ̯/",
+                "(General American) IPA": "/blu/",
+                "(obsolete) enPR": "/bljuː/"
+            },
+            "phonetic": {}
+        },
+        "forms": [
+            {
+                "part-of-speech": "adjective",
+                "gender": "none",
+                "definitions": [
+                    "blue (comparative bluer, superlative bluest)",
+                    "Having blue as its color.",
+                    "(informal) Depressed, melancholic, sad.",
+                    "Pale, without redness or glare; said of a flame.",
+                    "(politics) Supportive of, run by (a member of), pertaining to, or dominated by a political party represented by the colour blue.",
+                    "(astronomy) Of the higher-frequency region of the part of the electromagnetic spectrum which is relevant in the specific observation.",
+                    "(of steak) Extra rare; left very raw and cold.",
+                    "(of a dog or cat) Having a coat of fur of a slaty gray shade.",
+                    "(archaic) Severe or overly strict in morals; gloomy.",
+                    "(archaic, of women) literary; bluestockinged.",
+                    "(particle physics) Having a color charge of blue.",
+                    "(entertainment) Risque or obscene"
+                ],
+                "inflections": {
+                    "comparative": "bluer",
+                    "superlative": "bluest"
+                }
+            },
+            {
+                "part-of-speech": "noun",
+                "gender": "none",
+                "definitions": [
+                    "blue (countable and uncountable, plural blues)",
+                    "(countable and uncountable) The colour of the clear sky or the deep sea, between green and violet in the visible spectrum, and one of the primary additive colours for transmitted light; the colour obtained by subtracting red and green from white light using magenta and cyan filters; or any colour resembling this.",
+                    "Anything coloured blue, especially to distinguish it from similar objects differing only in color.",
+                    "A blue dye or pigment.",
+                    "Blue clothing.",
+                    "The sky, literally or figuratively.",
+                    "The ocean; deep waters.",
+                    "The far distance; a remote or distant place.",
+                    "A dog or cat with a slaty gray coat.",
+                    "(snooker) One of the colour balls used in snooker, with a value of five points.",
+                    "(entomology) Any of the butterflies of the subfamily Polyommatinae in the family Lycaenidae, most of which have blue on their wings.",
+                    "A bluefish.",
+                    "(Australia, colloquial) An argument.",
+                    "A liquid with an intense blue colour, added to a laundry wash to prevent yellowing of white clothes.",
+                    "Any of several processes to protect metal against rust.",
+                    "(Britain) A type of firecracker.",
+                    "(particle physics) One of the three color charges for quarks.",
+                    "(Britain) A member or supporter of the Conservative Party."
+                ],
+                "inflections": {
+                    "plural": "blues"
+                }
+            },
+            {
+                "part-of-speech": "verb",
+                "gender": "none",
+                "definitions": [
+                    "blue (third-person singular simple present blues, present participle blueing or bluing, simple past and past participle blued)",
+                    "(ergative) To make or become blue.",
+                    "(transitive, metallurgy) To treat the surface of steel so that it is passivated chemically and becomes more resistant to rust.",
+                    "(transitive, laundry) To brighten by treating with blue (laundry aid)",
+                    "(transitive, slang, dated) To spend (money) extravagantly; to blow."
+                ],
+                "inflections": {
+                    "third-person singular simple present": "blues",
+                    "present participle": "blueing",
+                    "simple past and past participle": "blued"
+                }
+            }
+        ],
+        "etymology": "From Middle English blewe, from Anglo-Norman blew (“blue”), from Frankish *blāu (“blue”) (perhaps through a Medieval Latin blāvus, blāvius (“blue”)), from Proto-Germanic *blēwaz (“blue, dark blue”), from Proto-Indo-European *bʰlēw- (“yellow, blond, grey”). Cognate with dialectal English blow (“blue”), Scots blue, blew (“blue”), North Frisian bla, blö (“blue”), Saterland Frisian blau (“blue”), Dutch blauw (“blue”), German blau (“blue”), Danish, Norwegian and Swedish blå (“blue”), Icelandic blár (“blue”), Latin flāvus (“yellow”), Middle Irish blá (“yellow”). Doublet of blae.\n",
+        "ancestors": [
+            {
+                "word": "blewe",
+                "lang-code": "enm",
+                "meaning": "blue",
+                "language": "Middle English"
+            },
+            {
+                "word": "blew",
+                "lang-code": "fro",
+                "meaning": "blue",
+                "language": "Old French"
+            },
+            {
+                "word": "*blāu",
+                "lang-code": "gmw-pro",
+                "meaning": "blue",
+                "language": "Proto-West Germanic"
+            },
+            {
+                "word": "blāvus",
+                "lang-code": "la",
+                "meaning": "blue",
+                "uncertain": true,
+                "language": "Latin"
+            },
+            {
+                "word": "*blēwaz",
+                "lang-code": "gem-pro",
+                "meaning": "blue, dark blue",
+                "language": "Proto-Germanic"
+            },
+            {
+                "word": "*bʰlēw-",
+                "lang-code": "ine-pro",
+                "meaning": "yellow, blond, grey",
+                "language": "Proto-Indo-European"
+            }
+        ],
+        "descendants": [
+            {
+                "word": "blu",
+                "lang-code": "tpi",
+                "meaning": "blue",
+                "language": "Tok Pisin"
+            },
+            {
+                "word": "bulu",
+                "lang-code": "hif",
+                "meaning": "blue",
+                "loan-word": true,
+                "language": "Fiji Hindi"
+            },
+            {
+                "word": "bhuluu",
+                "lang-code": "sn",
+                "meaning": "blue",
+                "loan-word": true,
+                "language": "Shona"
+            },
+            {
+                "word": "buluug",
+                "lang-code": "so",
+                "meaning": "blue",
+                "loan-word": true,
+                "language": "Somali"
+            },
+            {
+                "word": "bluu",
+                "lang-code": "sw",
+                "meaning": "blue",
+                "loan-word": true,
+                "language": "Swahili"
+            },
+            {
+                "word": "buluu",
+                "lang-code": "sw",
+                "meaning": "blue",
+                "language": "Swahili"
+            }
+        ],
+        "cognates": [
+            {
+                "word": "blāvius",
+                "lang-code": "la",
+                "meaning": "blue",
+                "language": "Latin"
+            },
+            {
+                "word": "blow",
+                "lang-code": "en",
+                "meaning": "blue",
+                "language": "English"
+            },
+            {
+                "word": "blue",
+                "lang-code": "sco",
+                "meaning": "blue",
+                "language": "Scots"
+            },
+            {
+                "word": "blew",
+                "lang-code": "sco",
+                "meaning": "blue",
+                "language": "Scots"
+            },
+            {
+                "word": "bla",
+                "lang-code": "frr",
+                "meaning": "blue",
+                "language": "North Frisian"
+            },
+            {
+                "word": "blö",
+                "lang-code": "frr",
+                "meaning": "blue",
+                "language": "North Frisian"
+            },
+            {
+                "word": "blau",
+                "lang-code": "stq",
+                "meaning": "blue",
+                "language": "Saterland Frisian"
+            },
+            {
+                "word": "blauw",
+                "lang-code": "nl",
+                "meaning": "blue",
+                "language": "Dutch"
+            },
+            {
+                "word": "blau",
+                "lang-code": "de",
+                "meaning": "blue",
+                "language": "German"
+            },
+            {
+                "word": "blå",
+                "lang-code": "sv",
+                "meaning": "blue",
+                "language": "Swedish"
+            },
+            {
+                "word": "blár",
+                "lang-code": "is",
+                "meaning": "blue",
+                "language": "Icelandic"
+            },
+            {
+                "word": "flāvus",
+                "lang-code": "la",
+                "meaning": "yellow",
+                "language": "Latin"
+            },
+            {
+                "word": "blá",
+                "lang-code": "mga",
+                "meaning": "yellow",
+                "language": "Middle Irish"
+            }
+        ],
+        "parent": {
+            "word": "blewe",
+            "lang-code": "enm",
+            "meaning": "blue",
+            "language": "Middle English"
+        }
+    },
+    {
+        "key": "blue#en#2",
+        "word": "blue",
+        "language": "English",
+        "lang-code": "en",
+        "variant": 2,
+        "meaning": "blue",
+        "pronunciation": {
+            "phonemic": {
+                "enPR": "/bluː/",
+                "(Wales) IPA": "/blɪʊ̯/",
+                "(General American) IPA": "/blu/",
+                "(obsolete) enPR": "/bljuː/"
+            },
+            "phonetic": {}
+        },
+        "forms": [
+            {
+                "part-of-speech": "adjective",
+                "gender": "none",
+                "definitions": [
+                    "blue (comparative more blue, superlative most blue)",
+                    "(entertainment, informal) Pornographic or profane."
+                ],
+                "inflections": {
+                    "comparative": "more blue",
+                    "superlative": "most blue"
+                }
+            }
+        ],
+        "etymology": "From the color of the envelopes used to contain missives of the censors and managers to vaudevillian performers on objectionable material from their acts that needed to be excised. (Can this(+) etymology be sourced?)",
+        "ancestors": [],
+        "descendants": [],
+        "cognates": []
+    }
+]

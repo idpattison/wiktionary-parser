@@ -1,0 +1,496 @@
+[
+    {
+        "key": "*raudaz#gem-pro#1",
+        "word": "*raudaz",
+        "language": "Proto-Germanic",
+        "lang-code": "gem-pro",
+        "variant": 1,
+        "meaning": "red",
+        "definition": "red",
+        "pronunciation": {
+            "phonemic": {
+                "IPA": "/ˈrɑu̯.ðɑz/"
+            },
+            "phonetic": {}
+        },
+        "forms": [
+            {
+                "part-of-speech": "adjective",
+                "gender": "none",
+                "definitions": [
+                    "*raudaz (comparative *raudōzô, superlative *raudōstaz)",
+                    "red"
+                ],
+                "inflections": {
+                    "comparative": "*raudōzô",
+                    "superlative": "*raudōstaz"
+                }
+            }
+        ],
+        "etymology": "From Proto-Indo-European *h₁rowdʰós < *h₁rewdʰ-.\n",
+        "ancestors": [
+            {
+                "word": "*h₁rowdʰós",
+                "lang-code": "ine-pro",
+                "meaning": "red",
+                "language": "Proto-Indo-European"
+            },
+            {
+                "word": "*h₁rewdʰ-",
+                "lang-code": "ine-pro",
+                "meaning": "red",
+                "language": "Proto-Indo-European"
+            }
+        ],
+        "descendants": [
+            {
+                "word": "*raud",
+                "lang-code": "gmw-pro",
+                "meaning": "red",
+                "language": "Proto-West Germanic"
+            },
+            {
+                "word": "rēad",
+                "lang-code": "ang",
+                "meaning": "red",
+                "language": "Old English"
+            },
+            {
+                "word": "read",
+                "lang-code": "enm",
+                "meaning": "red",
+                "language": "Middle English"
+            },
+            {
+                "word": "rede",
+                "lang-code": "enm",
+                "meaning": "red",
+                "language": "Middle English"
+            },
+            {
+                "word": "red",
+                "lang-code": "enm",
+                "meaning": "red",
+                "language": "Middle English"
+            },
+            {
+                "word": "red",
+                "lang-code": "en",
+                "meaning": "red",
+                "language": "English"
+            },
+            {
+                "word": "rede",
+                "lang-code": "sco",
+                "meaning": "red",
+                "language": "Scots"
+            },
+            {
+                "word": "reid",
+                "lang-code": "sco",
+                "meaning": "red",
+                "language": "Scots"
+            },
+            {
+                "word": "reed",
+                "lang-code": "yol",
+                "meaning": "red",
+                "language": "Yola"
+            },
+            {
+                "word": "rād",
+                "lang-code": "ofs",
+                "meaning": "red",
+                "language": "Old Frisian"
+            },
+            {
+                "word": "ruad",
+                "lang-code": "frr",
+                "meaning": "red",
+                "language": "North Frisian"
+            },
+            {
+                "word": "ruud",
+                "lang-code": "frr",
+                "meaning": "red",
+                "language": "North Frisian"
+            },
+            {
+                "word": "ruad",
+                "lang-code": "frr",
+                "meaning": "red",
+                "language": "North Frisian"
+            },
+            {
+                "word": "rooad",
+                "lang-code": "frr",
+                "meaning": "red",
+                "language": "North Frisian"
+            },
+            {
+                "word": "rüüdj",
+                "lang-code": "frr",
+                "meaning": "red",
+                "language": "North Frisian"
+            },
+            {
+                "word": "ruar",
+                "lang-code": "frr",
+                "meaning": "red",
+                "language": "North Frisian"
+            },
+            {
+                "word": "ruuid",
+                "lang-code": "frr",
+                "meaning": "red",
+                "language": "North Frisian"
+            },
+            {
+                "word": "rood",
+                "lang-code": "stq",
+                "meaning": "red",
+                "language": "Saterland Frisian"
+            },
+            {
+                "word": "read",
+                "lang-code": "fy",
+                "meaning": "red",
+                "language": "West Frisian"
+            },
+            {
+                "word": "rōd",
+                "lang-code": "osx",
+                "meaning": "red",
+                "language": "Old Saxon"
+            },
+            {
+                "word": "rōt",
+                "lang-code": "gml",
+                "meaning": "red",
+                "language": "Middle Low German"
+            },
+            {
+                "word": "rod",
+                "lang-code": "nds-de",
+                "meaning": "red",
+                "language": "German Low German"
+            },
+            {
+                "word": "räod",
+                "lang-code": "nds",
+                "meaning": "red",
+                "language": "Low German"
+            },
+            {
+                "word": "raud",
+                "lang-code": "nds",
+                "meaning": "red",
+                "language": "Low German"
+            },
+            {
+                "word": "reyet",
+                "lang-code": "nds",
+                "meaning": "red",
+                "language": "Low German"
+            },
+            {
+                "word": "rout",
+                "lang-code": "nds",
+                "meaning": "red",
+                "language": "Low German"
+            },
+            {
+                "word": "rōet",
+                "lang-code": "nds",
+                "meaning": "red",
+                "language": "Low German"
+            },
+            {
+                "word": "root",
+                "lang-code": "nds",
+                "meaning": "red",
+                "language": "Low German"
+            },
+            {
+                "word": "root",
+                "lang-code": "pdt",
+                "meaning": "red",
+                "language": "Plautdietsch"
+            },
+            {
+                "word": "rōt",
+                "lang-code": "odt",
+                "meaning": "red",
+                "language": "Old Dutch"
+            },
+            {
+                "word": "rôot",
+                "lang-code": "dum",
+                "meaning": "red",
+                "language": "Middle Dutch"
+            },
+            {
+                "word": "rood",
+                "lang-code": "nl",
+                "meaning": "red",
+                "language": "Dutch"
+            },
+            {
+                "word": "rooi",
+                "lang-code": "af",
+                "meaning": "red",
+                "language": "Afrikaans"
+            },
+            {
+                "word": "roead",
+                "lang-code": "li",
+                "meaning": "red",
+                "language": "Limburgish"
+            },
+            {
+                "word": "rōt",
+                "lang-code": "goh",
+                "meaning": "red",
+                "language": "Old High German"
+            },
+            {
+                "word": "rōt",
+                "lang-code": "gmh",
+                "meaning": "red",
+                "language": "Middle High German"
+            },
+            {
+                "word": "rot",
+                "lang-code": "gsw",
+                "meaning": "red",
+                "language": "Alemannic German"
+            },
+            {
+                "word": "rout",
+                "lang-code": "gsw",
+                "meaning": "red",
+                "language": "Alemannic German"
+            },
+            {
+                "word": "ruat",
+                "lang-code": "gsw",
+                "meaning": "red",
+                "language": "Alemannic German"
+            },
+            {
+                "word": "ròt",
+                "lang-code": "gsw",
+                "meaning": "red",
+                "language": "Alemannic German"
+            },
+            {
+                "word": "röts",
+                "lang-code": "gsw",
+                "meaning": "red",
+                "language": "Alemannic German"
+            },
+            {
+                "word": "rot",
+                "lang-code": "de",
+                "meaning": "red",
+                "language": "German"
+            },
+            {
+                "word": "rod",
+                "lang-code": "hrx",
+                "meaning": "red",
+                "language": "Hunsrik"
+            },
+            {
+                "word": "rout",
+                "lang-code": "lb",
+                "meaning": "red",
+                "language": "Luxembourgish"
+            },
+            {
+                "word": "roat",
+                "lang-code": "mhn",
+                "meaning": "red",
+                "language": "Mòcheno"
+            },
+            {
+                "word": "rot",
+                "lang-code": "pdc",
+                "meaning": "red",
+                "language": "Pennsylvania German"
+            },
+            {
+                "word": "rut",
+                "lang-code": "wym",
+                "meaning": "red",
+                "language": "Vilamovian"
+            },
+            {
+                "word": "רויט",
+                "lang-code": "yi",
+                "meaning": "red",
+                "language": "Yiddish",
+                "latin-form": "royt"
+            },
+            {
+                "word": "rauðr",
+                "lang-code": "non",
+                "meaning": "red",
+                "language": "Old Norse"
+            },
+            {
+                "word": "rauður",
+                "lang-code": "is",
+                "meaning": "red",
+                "language": "Icelandic"
+            },
+            {
+                "word": "reyður",
+                "lang-code": "fo",
+                "meaning": "red",
+                "language": "Faroese"
+            },
+            {
+                "word": "rø",
+                "lang-code": "nrn",
+                "meaning": "red",
+                "language": "Norn"
+            },
+            {
+                "word": "rød",
+                "lang-code": "nb",
+                "meaning": "red",
+                "language": "Norwegian Bokmål"
+            },
+            {
+                "word": "raud",
+                "lang-code": "nn",
+                "meaning": "red",
+                "language": "Norwegian Nynorsk"
+            },
+            {
+                "word": "rø̄þer",
+                "lang-code": "gmq-osw",
+                "meaning": "red",
+                "language": "Old Swedish"
+            },
+            {
+                "word": "röd",
+                "lang-code": "sv",
+                "meaning": "red",
+                "language": "Swedish"
+            },
+            {
+                "word": "rø",
+                "lang-code": "gmq-bot",
+                "meaning": "red",
+                "language": "Westrobothnian"
+            },
+            {
+                "word": "rød",
+                "lang-code": "da",
+                "meaning": "red",
+                "language": "Danish"
+            },
+            {
+                "word": "rog",
+                "lang-code": "gmq-bot",
+                "meaning": "red",
+                "language": "Westrobothnian"
+            },
+            {
+                "word": "rȯuw",
+                "lang-code": "gmq-bot",
+                "meaning": "red",
+                "language": "Westrobothnian"
+            },
+            {
+                "word": "reod",
+                "lang-code": "gmq-bot",
+                "meaning": "red",
+                "language": "Westrobothnian"
+            },
+            {
+                "word": "roð",
+                "lang-code": "ovd",
+                "meaning": "red",
+                "language": "Elfdalian"
+            },
+            {
+                "word": "roðå",
+                "lang-code": "ovd",
+                "meaning": "red",
+                "language": "Elfdalian"
+            },
+            {
+                "word": "raudar",
+                "lang-code": "gmq-gut",
+                "meaning": "red",
+                "language": "Gutnish"
+            },
+            {
+                "word": "raudår",
+                "lang-code": "gmq-gut",
+                "meaning": "red",
+                "language": "Gutnish"
+            },
+            {
+                "word": "raudur",
+                "lang-code": "gmq-gut",
+                "meaning": "red",
+                "language": "Gutnish"
+            },
+            {
+                "word": "𐍂𐌰𐌿𐌸𐍃",
+                "lang-code": "got",
+                "meaning": "red",
+                "language": "Gothic",
+                "latin-form": "rauþs"
+            },
+            {
+                "word": "ruán",
+                "lang-code": "gl",
+                "meaning": "red",
+                "loan-word": true,
+                "language": "Galician"
+            },
+            {
+                "word": "ruão",
+                "lang-code": "pt",
+                "meaning": "red",
+                "loan-word": true,
+                "language": "Portuguese"
+            },
+            {
+                "word": "roano",
+                "lang-code": "es",
+                "meaning": "red",
+                "loan-word": true,
+                "language": "Spanish"
+            },
+            {
+                "word": "*rauta",
+                "lang-code": "fiu-fin-pro",
+                "meaning": "red",
+                "uncertain": true,
+                "loan-word": true,
+                "language": "Proto-Finnic"
+            },
+            {
+                "word": "*ruovtē",
+                "lang-code": "smi-pro",
+                "meaning": "red",
+                "uncertain": true,
+                "loan-word": true,
+                "language": "Proto-Samic"
+            }
+        ],
+        "cognates": [],
+        "parent": {
+            "word": "*h₁rowdʰós",
+            "lang-code": "ine-pro",
+            "meaning": "red",
+            "language": "Proto-Indo-European"
+        }
+    }
+]

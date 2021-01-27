@@ -36,6 +36,12 @@
    "mode": "NULLABLE"
  },
  {
+   "description": "the first available dictionary definition of this word",
+   "name": "definition",
+   "type": "STRING",
+   "mode": "NULLABLE"
+ },
+ {
    "description": "the IPA pronunciation of the word, if available",
    "name": "pronunciation",
    "type": "STRING",
@@ -72,9 +78,15 @@
     "mode": "REQUIRED"
     },
  {
-    "description": "the relationship to the core word - core, ancestor, descendant or cognate",
+    "description": "the relationship to the core word - core, ancestor, borrowed ancestor, descendant, loaned descendant or cognate",
     "name": "relation_to_core_word",
     "type": "STRING",
+    "mode": "REQUIRED"
+    },
+ {
+    "description": "an uncertain relationship is marked as True",
+    "name": "uncertain",
+    "type": "BOOLEAN",
     "mode": "REQUIRED"
     }
 ]

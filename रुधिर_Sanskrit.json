@@ -1,0 +1,158 @@
+[
+    {
+        "key": "रुधिर#sa#1",
+        "word": "रुधिर",
+        "language": "Sanskrit",
+        "lang-code": "sa",
+        "variant": 1,
+        "meaning": "red",
+        "pronunciation": {
+            "phonemic": {
+                "(Vedic) IPA": "/ɾu.d̪ʱi.ɾɐ́/",
+                "(Classical) IPA": "/ˈɾu.d̪ʱi.ɾɐ/"
+            },
+            "phonetic": {}
+        },
+        "forms": [
+            {
+                "part-of-speech": "adjective",
+                "gender": "none",
+                "definitions": [
+                    "रुधिर • (rudhirá)",
+                    "red, blood-red, bloody"
+                ],
+                "inflections": {}
+            },
+            {
+                "part-of-speech": "noun",
+                "gender": "m",
+                "definitions": [
+                    "रुधिर • (rudhirá) m",
+                    "the bloodred planet or Mars",
+                    "a kind of precious stone (compare रुधिराख्य (rudhirā*khya))"
+                ],
+                "inflections": {}
+            },
+            {
+                "part-of-speech": "noun",
+                "gender": "n",
+                "definitions": [
+                    "रुधिर • (rudhirá) n",
+                    "saffron",
+                    "name of a city"
+                ],
+                "inflections": {}
+            }
+        ],
+        "etymology": "From Proto-Indo-Aryan *Hrudʰrás, from Proto-Indo-Iranian *Hrudʰrás, from Proto-Indo-European *h₁rudʰrós (“red”), from *h₁rewdʰ- (“red”) . Cognate with Avestan 𐬭𐬀𐬊𐬌𐬜𐬌𐬙𐬀‎ (raoiδita-), Ancient Greek ἐρυθρός (eruthrós) Latin ruber, Tocharian A rtär, Tocharian B ratre, Old Church Slavonic рудъ (rudŭ), Lithuanian raúdas, Old English rēad (whence English red).\nThe ephenthesis of -i- from expected *rudhrá is due to influence by रुधिक्रा (rudhikrā́).\n",
+        "ancestors": [
+            {
+                "word": "*Hrudʰrás",
+                "lang-code": "inc-pro",
+                "meaning": "red",
+                "language": "Proto-Indo-Aryan"
+            },
+            {
+                "word": "*Hrudʰrás",
+                "lang-code": "iir-pro",
+                "meaning": "red",
+                "language": "Proto-Indo-Iranian"
+            },
+            {
+                "word": "*h₁rudʰrós",
+                "lang-code": "ine-pro",
+                "meaning": "red",
+                "language": "Proto-Indo-European"
+            },
+            {
+                "word": "*h₁rewdʰ-",
+                "lang-code": "ine-pro",
+                "meaning": "red",
+                "language": "Proto-Indo-European"
+            },
+            {
+                "word": "रुधिक्रा",
+                "lang-code": "sa",
+                "meaning": "red",
+                "language": "Sanskrit",
+                "latin-form": "rudhikrā́"
+            }
+        ],
+        "descendants": [
+            {
+                "word": "రుధిరము",
+                "lang-code": "te",
+                "meaning": "red",
+                "loan-word": true,
+                "language": "Telugu",
+                "latin-form": "rudhiramu"
+            }
+        ],
+        "cognates": [
+            {
+                "word": "𐬭𐬀𐬊𐬌𐬜𐬌𐬙𐬀",
+                "lang-code": "ae",
+                "meaning": "red",
+                "language": "Avestan",
+                "latin-form": "raoiδita-"
+            },
+            {
+                "word": "ἐρυθρός",
+                "lang-code": "grc",
+                "meaning": "red",
+                "language": "Ancient Greek",
+                "latin-form": "eruthrós"
+            },
+            {
+                "word": "ruber",
+                "lang-code": "la",
+                "meaning": "red",
+                "language": "Latin"
+            },
+            {
+                "word": "rtär",
+                "lang-code": "xto",
+                "meaning": "red",
+                "language": "Tocharian A"
+            },
+            {
+                "word": "ratre",
+                "lang-code": "txb",
+                "meaning": "red",
+                "language": "Tocharian B"
+            },
+            {
+                "word": "рудъ",
+                "lang-code": "cu",
+                "meaning": "red",
+                "language": "Old Church Slavonic",
+                "latin-form": "rudŭ"
+            },
+            {
+                "word": "raúdas",
+                "lang-code": "lt",
+                "meaning": "red",
+                "language": "Lithuanian"
+            },
+            {
+                "word": "rēad",
+                "lang-code": "ang",
+                "meaning": "red",
+                "language": "Old English"
+            },
+            {
+                "word": "red",
+                "lang-code": "en",
+                "meaning": "red",
+                "language": "English"
+            }
+        ],
+        "latin-form": "rudhirá",
+        "parent": {
+            "word": "*Hrudʰrás",
+            "lang-code": "inc-pro",
+            "meaning": "red",
+            "language": "Proto-Indo-Aryan"
+        }
+    }
+]

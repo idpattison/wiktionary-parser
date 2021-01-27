@@ -77,6 +77,7 @@ def start(start_words, debug_mode, passed_filename):
                         'lang-code': lang_code,
                         'variant': variant,
                         'meaning': s['meaning'],
+                        'definition': '',
                         'pronunciation': { 'phonemic': {}, 'phonetic': {} },
                         'forms': [],
                         'etymology': word['etymology']['text'].replace('{', '').replace('}', ''),
@@ -102,6 +103,10 @@ def start(start_words, debug_mode, passed_filename):
                 for rel in d['relatedWords']:
                     if (rel['relationshipType'] == 'descendants'):
                         parseDescendants(rel['words']['map'], new_word, debug_mode)
+
+                # fetch the first definition of the first form
+                if (form == 0 and len(d['text']['text']) > 1):
+                    new_word['definition'] = d['text']['text'][1]
 
                 # parse the inflections
                 parseInflections(d['text']['map'], new_word, form, debug_mode)
@@ -153,7 +158,7 @@ def parseInflections(inflections_map, word_structure, form, debug_mode):
             # if the item is an italic block, it's probably an inflection type
             if (item['name'] == 'i'):
                 # check for declensions and conjugations
-                if ('conjugation' in item['text']):
+                if ('conjugation' in item['text']): 
                     word_structure['forms'][form]['inflections']['conjugation'] = item['text']
                     debug_string += 'found conjugation: ' + item['text'] + ' | '
                 elif ('declension' in item['text']):
@@ -176,6 +181,11 @@ def parseInflections(inflections_map, word_structure, form, debug_mode):
                 if (word_structure['forms'][form]['gender'] == 'none'):
                     word_structure['forms'][form]['gender'] = item['text']
                     debug_string += 'found gender: ' + item['text'] + ' | '
+
+            # or it may be a Latin form of a non-Latin word
+            if (item['name'] == 'span' and 'headword-tr' in item['class']):
+                word_structure['latin-form'] = item['text']
+                debug_string += 'found latin form: ' + item['text'] + ' | '
 
 
         if (debug_mode):

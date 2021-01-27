@@ -1,0 +1,188 @@
+[
+    {
+        "key": "yellow#en#1",
+        "word": "yellow",
+        "language": "English",
+        "lang-code": "en",
+        "variant": 1,
+        "meaning": "yellow",
+        "pronunciation": {
+            "phonemic": {
+                "(Received Pronunciation) IPA": "/ˈjɛl.əʊ/",
+                "(General American) enPR": "/ˈjɛl.oʊ/",
+                "(dialect) IPA": "/ˈjɛl.ɚ/",
+                "(dated, Southern US folk speech) IPA": "/jɛlə/"
+            },
+            "phonetic": {}
+        },
+        "forms": [
+            {
+                "part-of-speech": "adjective",
+                "gender": "none",
+                "definitions": [
+                    "yellow (comparative yellower, superlative yellowest)",
+                    "Having yellow as its color.",
+                    "(informal) Lacking courage.",
+                    "(publishing, journalism) Characterized by sensationalism, lurid content, and doubtful accuracy.",
+                    "(chiefly derogatory, offensive, racist) Of the skin, having the colour traditionally attributed to Far East Asians, especially Chinese.",
+                    "(chiefly derogatory, offensive, ethnic slur) Far East Asian (relating to Asian people).",
+                    "(dated, Australia, offensive) Of mixed Aboriginal and Caucasian ancestry.",
+                    "(dated, US) High yellow.",
+                    "(Britain, politics) Related to the Liberal Democrats.",
+                    "(politics) Related to the Free Democratic Party of Germany."
+                ],
+                "inflections": {
+                    "comparative": "yellower",
+                    "superlative": "yellowest"
+                }
+            },
+            {
+                "part-of-speech": "noun",
+                "gender": "none",
+                "definitions": [
+                    "yellow (plural yellows)",
+                    "The colour of gold, butter, or a lemon; the colour obtained by mixing green and red light, or by subtracting blue from white light.",
+                    "(US) The intermediate light in a set of three traffic lights, the illumination of which indicates that drivers should stop short of the intersection if it is safe to do so.",
+                    "(snooker) One of the colour balls used in snooker, with a value of 2 points.",
+                    "(pocket billiards) One of two groups of object balls, or a ball from that group, as used in the principally British version of pool that makes use of unnumbered balls (the (yellow(s) and red(s)); contrast stripes and solids in the originally American version with numbered balls).",
+                    "(sports) A yellow card.",
+                    "Any of various pierid butterflies of the subfamily Coliadinae, especially the yellow coloured species. Compare sulphur."
+                ],
+                "inflections": {
+                    "plural": "yellows"
+                }
+            },
+            {
+                "part-of-speech": "verb",
+                "gender": "none",
+                "definitions": [
+                    "yellow (third-person singular simple present yellows, present participle yellowing, simple past and past participle yellowed)",
+                    "(intransitive) To become yellow or more yellow.",
+                    "(transitive) To make (something) yellow or more yellow."
+                ],
+                "inflections": {
+                    "third-person singular simple present": "yellows",
+                    "present participle": "yellowing",
+                    "simple past and past participle": "yellowed"
+                }
+            }
+        ],
+        "etymology": "From Middle English yelwe, yelou, from Old English ġeolwe, oblique form of of Old English ġeolu, from Proto-West Germanic *gelu, from  Proto-Germanic *gelwaz, from Proto-Indo-European *ǵʰelh₃wos, from *ǵʰelh₃- (“gleam, yellow”)Compare Welsh gwelw (“pale”), Latin helvus (“dull yellow”)), Irish geal (“white, bright”), Lithuanian žalias (“green”), Ancient Greek χλωρός (khlōrós, “light green”), Persian زرد‎ (zard, “yellow”), Sanskrit हरि (hari, “greenish-yellow”)). Cognate with German gelb (“yellow”), Dutch geel (“yellow”).\nThe verb is from Old English ġeolwian, from the adjective.\n",
+        "ancestors": [
+            {
+                "word": "yelwe, yelou",
+                "lang-code": "enm",
+                "meaning": "yellow",
+                "language": "Middle English"
+            },
+            {
+                "word": "ġeolwe",
+                "lang-code": "ang",
+                "meaning": "yellow",
+                "language": "Old English"
+            },
+            {
+                "word": "*gelu",
+                "lang-code": "gmw-pro",
+                "meaning": "yellow",
+                "language": "Proto-West Germanic"
+            },
+            {
+                "word": "*gelwaz",
+                "lang-code": "gem-pro",
+                "meaning": "yellow",
+                "language": "Proto-Germanic"
+            },
+            {
+                "word": "*ǵʰelh₃wos",
+                "lang-code": "ine-pro",
+                "meaning": "yellow",
+                "language": "Proto-Indo-European"
+            },
+            {
+                "word": "*ǵʰelh₃-",
+                "lang-code": "ine-pro",
+                "meaning": "gleam, yellow",
+                "language": "Proto-Indo-European"
+            },
+            {
+                "word": "ġeolwian",
+                "lang-code": "ang",
+                "meaning": "yellow",
+                "language": "Old English"
+            }
+        ],
+        "descendants": [],
+        "cognates": [
+            {
+                "word": "ġeolu",
+                "lang-code": "ang",
+                "meaning": "yellow",
+                "language": "Old English"
+            },
+            {
+                "word": "gwelw",
+                "lang-code": "cy",
+                "meaning": "pale",
+                "language": "Welsh"
+            },
+            {
+                "word": "helvus",
+                "lang-code": "la",
+                "meaning": "dull yellow",
+                "language": "Latin"
+            },
+            {
+                "word": "geal",
+                "lang-code": "ga",
+                "meaning": "white, bright",
+                "language": "Irish"
+            },
+            {
+                "word": "žalias",
+                "lang-code": "lt",
+                "meaning": "green",
+                "language": "Lithuanian"
+            },
+            {
+                "word": "χλωρός",
+                "lang-code": "grc",
+                "meaning": "light green",
+                "language": "Ancient Greek",
+                "latin-form": "khlōrós"
+            },
+            {
+                "word": "زرد",
+                "lang-code": "fa",
+                "meaning": "yellow",
+                "language": "Persian",
+                "latin-form": "zard"
+            },
+            {
+                "word": "हरि",
+                "lang-code": "sa",
+                "meaning": "greenish-yellow",
+                "language": "Sanskrit",
+                "latin-form": "hari"
+            },
+            {
+                "word": "gelb",
+                "lang-code": "de",
+                "meaning": "yellow",
+                "language": "German"
+            },
+            {
+                "word": "geel",
+                "lang-code": "nl",
+                "meaning": "yellow",
+                "language": "Dutch"
+            }
+        ],
+        "parent": {
+            "word": "yelwe, yelou",
+            "lang-code": "enm",
+            "meaning": "yellow",
+            "language": "Middle English"
+        }
+    }
+]
