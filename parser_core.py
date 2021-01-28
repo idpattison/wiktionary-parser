@@ -11,13 +11,14 @@ PARTS_OF_SPEECH = [
     "letter", "character", "phrase", "proverb", "idiom",
     "symbol", "syllable", "numeral", "initialism", "interjection",
     "definitions", "pronoun", "particle", "predicative", "participle",
-    "suffix",
+    "suffix", "root",
 ]
 
 RELATIONS = [
     "synonyms", "antonyms", "hypernyms", "hyponyms",
     "meronyms", "holonyms", "troponyms", "related terms",
-    "coordinate terms", "descendants"
+    "coordinate terms", "descendants", "inflection",
+    "conjugation", "declension",
 ]
 
 def is_subheading(child, parent):
@@ -298,39 +299,56 @@ class WiktionaryParser(object):
             }
             span_tag = self.soup.find_all('span', {'id': related_id})[0]
             parent_tag = span_tag.parent
-            while parent_tag and not parent_tag.find_all('li'):
-                parent_tag = parent_tag.find_next_sibling()
-            if parent_tag:
-                for list_tag in parent_tag.find_all(['li', 'dd']):
-                    # added this to the original code to handle nested lists in descendants
-                    if (relation_type == 'descendants'):
-                        text = ''
-                        word_map = []
-                        for item in list_tag.contents:
-                            if (item.name in ['ul', 'ol', 'dl']):
-                                continue 
-                            if (isinstance(item, NavigableString)):
-                                text += item
-                            else:
-                                if ('lang' in item.attrs or 'title' in item.attrs):
-                                    text += '{' + item.text + '}'
+            if (relation_type in ['conjugation', 'declension', 'inflection']):
+                while parent_tag and not parent_tag.find_all('table'):
+                    parent_tag = parent_tag.find_next_sibling()
+                for table_tag in parent_tag.find_all('table'):
+                    if ('inflection-table' in table_tag.attrs['class']):
+                        for td_tag in table_tag.find_all('td'):
+                            if len(td_tag.contents) > 0 and td_tag.contents[0].name == 'span':
+                                infl_tag = td_tag.contents[0]
+                                if 'form-of' in infl_tag.attrs['class']:
                                     item_tag = {
-                                        'text': item.text,
-                                        'name': item.name,
-                                        'class': item.attrs['class']
+                                        'text': infl_tag.text,
+                                        'name': infl_tag.name,
+                                        'class': infl_tag.attrs['class']
                                     }
-                                    if ('lang' in item.attrs):
-                                        item_tag['lang'] = item.attrs['lang']
-                                    if ('title' in item.attrs):
-                                        item_tag['title'] = item.attrs['title']
-                                    word_map.append(item_tag)
+                                    words['map'].append(item_tag)
+
+            else:
+                while parent_tag and not parent_tag.find_all('li'):
+                    parent_tag = parent_tag.find_next_sibling()
+                if parent_tag:
+                    for list_tag in parent_tag.find_all(['li', 'dd']):
+                        # added this to the original code to handle nested lists in descendants
+                        if (relation_type == 'descendants'):
+                            text = ''
+                            word_map = []
+                            for item in list_tag.contents:
+                                if (item.name in ['ul', 'ol', 'dl']):
+                                    continue 
+                                if (isinstance(item, NavigableString)):
+                                    text += item
                                 else:
-                                    text += item.text
-                        words['text'].append(text)
-                        words['map'].append(word_map)
-                    else:
-                    # end of added code
-                        words['text'].append(list_tag.text)
+                                    if ('lang' in item.attrs or 'title' in item.attrs):
+                                        text += '{' + item.text + '}'
+                                        item_tag = {
+                                            'text': item.text,
+                                            'name': item.name,
+                                            'class': item.attrs['class']
+                                        }
+                                        if ('lang' in item.attrs):
+                                            item_tag['lang'] = item.attrs['lang']
+                                        if ('title' in item.attrs):
+                                            item_tag['title'] = item.attrs['title']
+                                        word_map.append(item_tag)
+                                    else:
+                                        text += item.text
+                            words['text'].append(text)
+                            words['map'].append(word_map)
+                        else:
+                        # end of added code
+                            words['text'].append(list_tag.text)
             related_words_list.append((related_index, words, relation_type))
         return related_words_list
 

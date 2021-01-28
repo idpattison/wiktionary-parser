@@ -1,6 +1,6 @@
 import sys
 import json
-from parser_interpret import start 
+from parser_interpret import start
 
 def main():
     # forms for calling the parser

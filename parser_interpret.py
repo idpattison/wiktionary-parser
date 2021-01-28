@@ -110,6 +110,7 @@ def start(start_words, debug_mode, passed_filename):
 
                 # parse the inflections
                 parseInflections(d['text']['map'], new_word, form, debug_mode)
+                parseInflections2(d['relatedWords'], new_word, form, debug_mode)
                 form += 1
 
             # parse the IPA
@@ -138,11 +139,12 @@ def start(start_words, debug_mode, passed_filename):
     print_to_file(json_string.decode())
 
 
+# parse any inflections found in the head definition
+
 def parseInflections(inflections_map, word_structure, form, debug_mode):
 
     # TODO - the Wiktionary markup specifies many more inflection types, we could capture those directly from the HTML
     # rather than hard coding them in here - see https://en.wiktionary.org/wiki/Category:Form-of_templates
-
 
     infl_type = ''
     debug_string = ''
@@ -191,6 +193,32 @@ def parseInflections(inflections_map, word_structure, form, debug_mode):
         if (debug_mode):
             print_to_file(debug_string)
         debug_string = ''
+
+
+# parse any inflections found in an inflection table
+
+def parseInflections2(related_words, word_structure, form, debug_mode):
+
+    debug_string = ''
+
+    # for each type of related words
+    for relation in related_words:
+        if (relation['relationshipType'] in ['conjugation', 'declension', 'inflection']):
+
+            # step through each element of the map
+            for item in relation['words']['map']:
+                if (item['name'] == 'span'):
+                    if ('form-of' in item['class']):
+                        infl_type = ''
+                        for class_item in item['class']:
+                            if (len(class_item) > 7 and class_item[-7:] == 'form-of'):
+                                infl_type = class_item[:-8]
+                                word_structure['forms'][form]['inflections'][infl_type] = item['text']
+                                debug_string += 'found inflection word: ' + item['text'] + ' | '
+
+    if (debug_mode):
+        print_to_file(debug_string)
+    debug_string = ''
 
 
 

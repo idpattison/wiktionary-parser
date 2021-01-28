@@ -1,0 +1,1124 @@
+
+INITIAL DATA IMPORT
+[
+    {
+        "etymology": {
+            "text": "From Old French veoir, veir, from earlier vedeir, from Latin vidēre, present active infinitive of videō, from Proto-Italic *widēō, ultimately from Proto-Indo-European *weyd-. Unrelated to voie and its derivatives and to voirie or avoir.\nSee cognates in regional languages in France : Norman veî or veir, Gallo vair, Picard vir, Bourguignon voi, Franco-Provençal vêre, Occitan veire or véser, Corsican vedè.\n",
+            "map": [
+                {
+                    "text": "From "
+                },
+                {
+                    "text": "Old French",
+                    "name": "span",
+                    "class": [
+                        "etyl"
+                    ]
+                },
+                {
+                    "text": " "
+                },
+                {
+                    "text": "veoir",
+                    "name": "i",
+                    "class": [
+                        "Latn",
+                        "mention"
+                    ],
+                    "lang": "fro"
+                },
+                {
+                    "text": ", "
+                },
+                {
+                    "text": "veir",
+                    "name": "i",
+                    "class": [
+                        "Latn",
+                        "mention"
+                    ],
+                    "lang": "fro"
+                },
+                {
+                    "text": ", from earlier "
+                },
+                {
+                    "text": "vedeir",
+                    "name": "i",
+                    "class": [
+                        "Latn",
+                        "mention"
+                    ],
+                    "lang": "fro"
+                },
+                {
+                    "text": ", from "
+                },
+                {
+                    "text": "Latin",
+                    "name": "span",
+                    "class": [
+                        "etyl"
+                    ]
+                },
+                {
+                    "text": " "
+                },
+                {
+                    "text": "vidēre",
+                    "name": "i",
+                    "class": [
+                        "Latn",
+                        "mention"
+                    ],
+                    "lang": "la"
+                },
+                {
+                    "text": ", present active infinitive of "
+                },
+                {
+                    "text": "videō",
+                    "name": "i",
+                    "class": [
+                        "Latn",
+                        "mention"
+                    ],
+                    "lang": "la"
+                },
+                {
+                    "text": ", from "
+                },
+                {
+                    "text": "Proto-Italic",
+                    "name": "span",
+                    "class": [
+                        "etyl"
+                    ]
+                },
+                {
+                    "text": " "
+                },
+                {
+                    "text": "*widēō",
+                    "name": "i",
+                    "class": [
+                        "Latinx",
+                        "mention"
+                    ],
+                    "lang": "itc-pro"
+                },
+                {
+                    "text": ", ultimately from "
+                },
+                {
+                    "text": "Proto-Indo-European",
+                    "name": "span",
+                    "class": [
+                        "etyl"
+                    ]
+                },
+                {
+                    "text": " "
+                },
+                {
+                    "text": "*weyd-",
+                    "name": "i",
+                    "class": [
+                        "Latinx",
+                        "mention"
+                    ],
+                    "lang": "ine-pro"
+                },
+                {
+                    "text": ". Unrelated to "
+                },
+                {
+                    "text": "voie",
+                    "name": "i",
+                    "class": [
+                        "Latn",
+                        "mention"
+                    ],
+                    "lang": "fr"
+                },
+                {
+                    "text": " and its derivatives and to "
+                },
+                {
+                    "text": "voirie",
+                    "name": "i",
+                    "class": [
+                        "Latn",
+                        "mention"
+                    ],
+                    "lang": "fr"
+                },
+                {
+                    "text": " or "
+                },
+                {
+                    "text": "avoir",
+                    "name": "i"
+                },
+                {
+                    "text": ".\n"
+                },
+                {
+                    "text": "See cognates in regional languages in France : "
+                },
+                {
+                    "text": "Norman",
+                    "name": "span",
+                    "class": [
+                        "etyl"
+                    ]
+                },
+                {
+                    "text": " "
+                },
+                {
+                    "text": "veî",
+                    "name": "i",
+                    "class": [
+                        "Latn",
+                        "mention"
+                    ],
+                    "lang": "nrf"
+                },
+                {
+                    "text": " or "
+                },
+                {
+                    "text": "veir",
+                    "name": "i"
+                },
+                {
+                    "text": ", "
+                },
+                {
+                    "text": "Gallo",
+                    "name": "span",
+                    "class": [
+                        "etyl"
+                    ]
+                },
+                {
+                    "text": " "
+                },
+                {
+                    "text": "vair",
+                    "name": "i",
+                    "class": [
+                        "Latn",
+                        "mention"
+                    ],
+                    "lang": "roa-gal"
+                },
+                {
+                    "text": ", "
+                },
+                {
+                    "text": "Picard",
+                    "name": "span",
+                    "class": [
+                        "etyl"
+                    ]
+                },
+                {
+                    "text": " "
+                },
+                {
+                    "text": "vir",
+                    "name": "i",
+                    "class": [
+                        "Latn",
+                        "mention"
+                    ],
+                    "lang": "pcd"
+                },
+                {
+                    "text": ", "
+                },
+                {
+                    "text": "Bourguignon",
+                    "name": "span",
+                    "class": [
+                        "etyl"
+                    ]
+                },
+                {
+                    "text": " "
+                },
+                {
+                    "text": "voi",
+                    "name": "i",
+                    "class": [
+                        "Latn",
+                        "mention"
+                    ],
+                    "lang": "roa-brg"
+                },
+                {
+                    "text": ", "
+                },
+                {
+                    "text": "Franco-Provençal",
+                    "name": "span",
+                    "class": [
+                        "etyl"
+                    ]
+                },
+                {
+                    "text": " "
+                },
+                {
+                    "text": "vêre",
+                    "name": "i",
+                    "class": [
+                        "Latn",
+                        "mention"
+                    ],
+                    "lang": "frp"
+                },
+                {
+                    "text": ", "
+                },
+                {
+                    "text": "Occitan",
+                    "name": "span",
+                    "class": [
+                        "etyl"
+                    ]
+                },
+                {
+                    "text": " "
+                },
+                {
+                    "text": "veire",
+                    "name": "i",
+                    "class": [
+                        "Latn",
+                        "mention"
+                    ],
+                    "lang": "oc"
+                },
+                {
+                    "text": " or "
+                },
+                {
+                    "text": "véser",
+                    "name": "i"
+                },
+                {
+                    "text": ", "
+                },
+                {
+                    "text": "Corsican",
+                    "name": "span",
+                    "class": [
+                        "etyl"
+                    ]
+                },
+                {
+                    "text": " "
+                },
+                {
+                    "text": "vedè",
+                    "name": "i",
+                    "class": [
+                        "Latn",
+                        "mention"
+                    ],
+                    "lang": "co"
+                },
+                {
+                    "text": ".\n"
+                }
+            ]
+        },
+        "definitions": [
+            {
+                "partOfSpeech": "verb",
+                "text": {
+                    "text": [
+                        "voir",
+                        "to see (visually)",
+                        "to see (to understand)",
+                        "to see (to visit, to go and see)"
+                    ],
+                    "map": [
+                        {
+                            "text": "voir",
+                            "name": "strong",
+                            "class": [
+                                "Latn",
+                                "headword"
+                            ],
+                            "lang": "fr"
+                        }
+                    ]
+                },
+                "relatedWords": [
+                    {
+                        "relationshipType": "conjugation",
+                        "words": {
+                            "text": [],
+                            "map": [
+                                {
+                                    "text": "voyant",
+                                    "name": "span",
+                                    "class": [
+                                        "Latn",
+                                        "form-of",
+                                        "lang-fr",
+                                        "ppr-form-of"
+                                    ]
+                                },
+                                {
+                                    "text": "vu",
+                                    "name": "span",
+                                    "class": [
+                                        "Latn",
+                                        "form-of",
+                                        "lang-fr",
+                                        "pp-form-of"
+                                    ]
+                                },
+                                {
+                                    "text": "vois",
+                                    "name": "span",
+                                    "class": [
+                                        "Latn",
+                                        "form-of",
+                                        "lang-fr",
+                                        "1|s|pres|indc-form-of"
+                                    ]
+                                },
+                                {
+                                    "text": "vois",
+                                    "name": "span",
+                                    "class": [
+                                        "Latn",
+                                        "form-of",
+                                        "lang-fr",
+                                        "2|s|pres|indc-form-of"
+                                    ]
+                                },
+                                {
+                                    "text": "voit",
+                                    "name": "span",
+                                    "class": [
+                                        "Latn",
+                                        "form-of",
+                                        "lang-fr",
+                                        "3|s|pres|indc-form-of"
+                                    ]
+                                },
+                                {
+                                    "text": "voyons",
+                                    "name": "span",
+                                    "class": [
+                                        "Latn",
+                                        "form-of",
+                                        "lang-fr",
+                                        "1|p|pres|indc-form-of"
+                                    ]
+                                },
+                                {
+                                    "text": "voyez",
+                                    "name": "span",
+                                    "class": [
+                                        "Latn",
+                                        "form-of",
+                                        "lang-fr",
+                                        "2|p|pres|indc-form-of"
+                                    ]
+                                },
+                                {
+                                    "text": "voient",
+                                    "name": "span",
+                                    "class": [
+                                        "Latn",
+                                        "form-of",
+                                        "lang-fr",
+                                        "3|p|pres|indc-form-of"
+                                    ]
+                                },
+                                {
+                                    "text": "voyais",
+                                    "name": "span",
+                                    "class": [
+                                        "Latn",
+                                        "form-of",
+                                        "lang-fr",
+                                        "1|s|impf|indc-form-of"
+                                    ]
+                                },
+                                {
+                                    "text": "voyais",
+                                    "name": "span",
+                                    "class": [
+                                        "Latn",
+                                        "form-of",
+                                        "lang-fr",
+                                        "2|s|impf|indc-form-of"
+                                    ]
+                                },
+                                {
+                                    "text": "voyait",
+                                    "name": "span",
+                                    "class": [
+                                        "Latn",
+                                        "form-of",
+                                        "lang-fr",
+                                        "3|s|impf|indc-form-of"
+                                    ]
+                                },
+                                {
+                                    "text": "voyions",
+                                    "name": "span",
+                                    "class": [
+                                        "Latn",
+                                        "form-of",
+                                        "lang-fr",
+                                        "1|p|impf|indc-form-of"
+                                    ]
+                                },
+                                {
+                                    "text": "voyiez",
+                                    "name": "span",
+                                    "class": [
+                                        "Latn",
+                                        "form-of",
+                                        "lang-fr",
+                                        "2|p|impf|indc-form-of"
+                                    ]
+                                },
+                                {
+                                    "text": "voyaient",
+                                    "name": "span",
+                                    "class": [
+                                        "Latn",
+                                        "form-of",
+                                        "lang-fr",
+                                        "3|p|impf|indc-form-of"
+                                    ]
+                                },
+                                {
+                                    "text": "vis",
+                                    "name": "span",
+                                    "class": [
+                                        "Latn",
+                                        "form-of",
+                                        "lang-fr",
+                                        "1|s|phis-form-of"
+                                    ]
+                                },
+                                {
+                                    "text": "vis",
+                                    "name": "span",
+                                    "class": [
+                                        "Latn",
+                                        "form-of",
+                                        "lang-fr",
+                                        "2|s|phis-form-of"
+                                    ]
+                                },
+                                {
+                                    "text": "vit",
+                                    "name": "span",
+                                    "class": [
+                                        "Latn",
+                                        "form-of",
+                                        "lang-fr",
+                                        "3|s|phis-form-of"
+                                    ]
+                                },
+                                {
+                                    "text": "vîmes",
+                                    "name": "span",
+                                    "class": [
+                                        "Latn",
+                                        "form-of",
+                                        "lang-fr",
+                                        "1|p|phis-form-of"
+                                    ]
+                                },
+                                {
+                                    "text": "vîtes",
+                                    "name": "span",
+                                    "class": [
+                                        "Latn",
+                                        "form-of",
+                                        "lang-fr",
+                                        "2|p|phis-form-of"
+                                    ]
+                                },
+                                {
+                                    "text": "virent",
+                                    "name": "span",
+                                    "class": [
+                                        "Latn",
+                                        "form-of",
+                                        "lang-fr",
+                                        "3|p|phis-form-of"
+                                    ]
+                                },
+                                {
+                                    "text": "verrai",
+                                    "name": "span",
+                                    "class": [
+                                        "Latn",
+                                        "form-of",
+                                        "lang-fr",
+                                        "1|s|futr-form-of"
+                                    ]
+                                },
+                                {
+                                    "text": "verras",
+                                    "name": "span",
+                                    "class": [
+                                        "Latn",
+                                        "form-of",
+                                        "lang-fr",
+                                        "2|s|futr-form-of"
+                                    ]
+                                },
+                                {
+                                    "text": "verra",
+                                    "name": "span",
+                                    "class": [
+                                        "Latn",
+                                        "form-of",
+                                        "lang-fr",
+                                        "3|s|futr-form-of"
+                                    ]
+                                },
+                                {
+                                    "text": "verrons",
+                                    "name": "span",
+                                    "class": [
+                                        "Latn",
+                                        "form-of",
+                                        "lang-fr",
+                                        "1|p|futr-form-of"
+                                    ]
+                                },
+                                {
+                                    "text": "verrez",
+                                    "name": "span",
+                                    "class": [
+                                        "Latn",
+                                        "form-of",
+                                        "lang-fr",
+                                        "2|p|futr-form-of"
+                                    ]
+                                },
+                                {
+                                    "text": "verront",
+                                    "name": "span",
+                                    "class": [
+                                        "Latn",
+                                        "form-of",
+                                        "lang-fr",
+                                        "3|p|futr-form-of"
+                                    ]
+                                },
+                                {
+                                    "text": "verrais",
+                                    "name": "span",
+                                    "class": [
+                                        "Latn",
+                                        "form-of",
+                                        "lang-fr",
+                                        "1|s|cond-form-of"
+                                    ]
+                                },
+                                {
+                                    "text": "verrais",
+                                    "name": "span",
+                                    "class": [
+                                        "Latn",
+                                        "form-of",
+                                        "lang-fr",
+                                        "2|s|cond-form-of"
+                                    ]
+                                },
+                                {
+                                    "text": "verrait",
+                                    "name": "span",
+                                    "class": [
+                                        "Latn",
+                                        "form-of",
+                                        "lang-fr",
+                                        "3|s|cond-form-of"
+                                    ]
+                                },
+                                {
+                                    "text": "verrions",
+                                    "name": "span",
+                                    "class": [
+                                        "Latn",
+                                        "form-of",
+                                        "lang-fr",
+                                        "1|p|cond-form-of"
+                                    ]
+                                },
+                                {
+                                    "text": "verriez",
+                                    "name": "span",
+                                    "class": [
+                                        "Latn",
+                                        "form-of",
+                                        "lang-fr",
+                                        "2|p|cond-form-of"
+                                    ]
+                                },
+                                {
+                                    "text": "verraient",
+                                    "name": "span",
+                                    "class": [
+                                        "Latn",
+                                        "form-of",
+                                        "lang-fr",
+                                        "3|p|cond-form-of"
+                                    ]
+                                },
+                                {
+                                    "text": "voie",
+                                    "name": "span",
+                                    "class": [
+                                        "Latn",
+                                        "form-of",
+                                        "lang-fr",
+                                        "1|s|pres|subj-form-of"
+                                    ]
+                                },
+                                {
+                                    "text": "voies",
+                                    "name": "span",
+                                    "class": [
+                                        "Latn",
+                                        "form-of",
+                                        "lang-fr",
+                                        "2|s|pres|subj-form-of"
+                                    ]
+                                },
+                                {
+                                    "text": "voie",
+                                    "name": "span",
+                                    "class": [
+                                        "Latn",
+                                        "form-of",
+                                        "lang-fr",
+                                        "3|s|pres|subj-form-of"
+                                    ]
+                                },
+                                {
+                                    "text": "voyions",
+                                    "name": "span",
+                                    "class": [
+                                        "Latn",
+                                        "form-of",
+                                        "lang-fr",
+                                        "1|p|pres|subj-form-of"
+                                    ]
+                                },
+                                {
+                                    "text": "voyiez",
+                                    "name": "span",
+                                    "class": [
+                                        "Latn",
+                                        "form-of",
+                                        "lang-fr",
+                                        "2|p|pres|subj-form-of"
+                                    ]
+                                },
+                                {
+                                    "text": "voient",
+                                    "name": "span",
+                                    "class": [
+                                        "Latn",
+                                        "form-of",
+                                        "lang-fr",
+                                        "3|p|pres|subj-form-of"
+                                    ]
+                                },
+                                {
+                                    "text": "visse",
+                                    "name": "span",
+                                    "class": [
+                                        "Latn",
+                                        "form-of",
+                                        "lang-fr",
+                                        "1|s|impf|subj-form-of"
+                                    ]
+                                },
+                                {
+                                    "text": "visses",
+                                    "name": "span",
+                                    "class": [
+                                        "Latn",
+                                        "form-of",
+                                        "lang-fr",
+                                        "2|s|impf|subj-form-of"
+                                    ]
+                                },
+                                {
+                                    "text": "vît",
+                                    "name": "span",
+                                    "class": [
+                                        "Latn",
+                                        "form-of",
+                                        "lang-fr",
+                                        "3|s|impf|subj-form-of"
+                                    ]
+                                },
+                                {
+                                    "text": "vissions",
+                                    "name": "span",
+                                    "class": [
+                                        "Latn",
+                                        "form-of",
+                                        "lang-fr",
+                                        "1|p|impf|subj-form-of"
+                                    ]
+                                },
+                                {
+                                    "text": "vissiez",
+                                    "name": "span",
+                                    "class": [
+                                        "Latn",
+                                        "form-of",
+                                        "lang-fr",
+                                        "2|p|impf|subj-form-of"
+                                    ]
+                                },
+                                {
+                                    "text": "vissent",
+                                    "name": "span",
+                                    "class": [
+                                        "Latn",
+                                        "form-of",
+                                        "lang-fr",
+                                        "3|p|impf|subj-form-of"
+                                    ]
+                                },
+                                {
+                                    "text": "vois",
+                                    "name": "span",
+                                    "class": [
+                                        "Latn",
+                                        "form-of",
+                                        "lang-fr",
+                                        "2|s|impr-form-of"
+                                    ]
+                                },
+                                {
+                                    "text": "voyons",
+                                    "name": "span",
+                                    "class": [
+                                        "Latn",
+                                        "form-of",
+                                        "lang-fr",
+                                        "1|p|impr-form-of"
+                                    ]
+                                },
+                                {
+                                    "text": "voyez",
+                                    "name": "span",
+                                    "class": [
+                                        "Latn",
+                                        "form-of",
+                                        "lang-fr",
+                                        "2|p|impr-form-of"
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "examples": [
+                    "Je vois ma mère là-bas.I see my mother over there.",
+                    "I see my mother over there.",
+                    "Tu vois que tu avais tort ?Do you see that you were wrong?",
+                    "Do you see that you were wrong?"
+                ]
+            },
+            {
+                "partOfSpeech": "adverb",
+                "text": {
+                    "text": [
+                        "voir",
+                        "(Louisiana) please (used to mark the imperative)"
+                    ],
+                    "map": [
+                        {
+                            "text": "voir",
+                            "name": "strong",
+                            "class": [
+                                "Latn",
+                                "headword"
+                            ],
+                            "lang": "fr"
+                        }
+                    ]
+                },
+                "relatedWords": [],
+                "examples": [
+                    "Viens voir ici. - Come here please."
+                ]
+            }
+        ],
+        "pronunciations": {
+            "text": [
+                "IPA: /vwaʁ/",
+                "(Louisiana) IPA: [(v)wɒ(ɾ)]",
+                "Homophone: voire",
+                "Rhymes: -waʁ"
+            ],
+            "audio": [
+                "//upload.wikimedia.org/wikipedia/commons/6/63/Fr-voir.ogg"
+            ]
+        }
+    }
+]
+
+found inflection word: voyant | found inflection word: vu | found inflection word: vois | found inflection word: vois | found inflection word: voit | found inflection word: voyons | found inflection word: voyez | found inflection word: voient | found inflection word: voyais | found inflection word: voyais | found inflection word: voyait | found inflection word: voyions | found inflection word: voyiez | found inflection word: voyaient | found inflection word: vis | found inflection word: vis | found inflection word: vit | found inflection word: vîmes | found inflection word: vîtes | found inflection word: virent | found inflection word: verrai | found inflection word: verras | found inflection word: verra | found inflection word: verrons | found inflection word: verrez | found inflection word: verront | found inflection word: verrais | found inflection word: verrais | found inflection word: verrait | found inflection word: verrions | found inflection word: verriez | found inflection word: verraient | found inflection word: voie | found inflection word: voies | found inflection word: voie | found inflection word: voyions | found inflection word: voyiez | found inflection word: voient | found inflection word: visse | found inflection word: visses | found inflection word: vît | found inflection word: vissions | found inflection word: vissiez | found inflection word: vissent | found inflection word: vois | found inflection word: voyons | found inflection word: voyez | 
+
+
+processing text: From  | setting ancestor mode | processing span with text: Old French | processing text:   | processing language item with text: veoir | adding word to list (mode=ancestor) | 
+
+processing text: ,  | processing language item with text: veir | adding word to list (mode=cognate) | 
+
+processing text: , from earlier  | setting ancestor mode | processing language item with text: vedeir | adding word to list (mode=ancestor) | 
+
+processing text: , from  | setting ancestor mode | processing span with text: Latin | processing text:   | processing language item with text: vidēre | adding word to list (mode=ancestor) | 
+
+processing text: , present active infinitive of  | processing language item with text: videō | adding word to list (mode=cognate) | 
+
+processing text: , from  | setting ancestor mode | processing span with text: Proto-Italic | processing text:   | processing language item with text: *widēō | adding word to list (mode=ancestor) | 
+
+processing text: , ultimately from  | setting ancestor mode | processing span with text: Proto-Indo-European | processing text:   | processing language item with text: *weyd- | adding word to list (mode=ancestor) | 
+
+processing text: . Unrelated to  | processing language item with text: voie | adding word to list (mode=cognate) | 
+
+processing text:  and its derivatives and to  | processing language item with text: voirie | adding word to list (mode=cognate) | 
+
+processing text:  or  | 
+processing text: .
+ | processing text: See cognates in regional languages in France :  | setting cognate mode | processing span with text: Norman | processing text:   | processing language item with text: veî | adding word to list (mode=cognate) | 
+
+processing text:  or  | 
+processing text: ,  | processing span with text: Gallo | processing text:   | processing language item with text: vair | adding word to list (mode=cognate) | 
+
+processing text: ,  | processing span with text: Picard | processing text:   | processing language item with text: vir | adding word to list (mode=cognate) | 
+
+processing text: ,  | processing span with text: Bourguignon | processing text:   | processing language item with text: voi | adding word to list (mode=cognate) | 
+
+processing text: ,  | processing span with text: Franco-Provençal | processing text:   | processing language item with text: vêre | adding word to list (mode=cognate) | 
+
+processing text: ,  | processing span with text: Occitan | processing text:   | processing language item with text: veire | adding word to list (mode=cognate) | 
+
+processing text:  or  | 
+processing text: ,  | processing span with text: Corsican | processing text:   | processing language item with text: vedè | adding word to list (mode=cognate) | 
+
+
+FINAL JSON OUTPUT
+[
+    {
+        "key": "voir#fr#1",
+        "word": "voir",
+        "language": "French",
+        "lang-code": "fr",
+        "variant": 1,
+        "meaning": "see",
+        "definition": "to see (visually)",
+        "pronunciation": {
+            "phonemic": {
+                "IPA": "/vwaʁ/"
+            },
+            "phonetic": {
+                "(Louisiana) IPA": "[(v)wɒ(ɾ)]"
+            }
+        },
+        "forms": [
+            {
+                "part-of-speech": "verb",
+                "gender": "none",
+                "definitions": [
+                    "voir",
+                    "to see (visually)",
+                    "to see (to understand)",
+                    "to see (to visit, to go and see)"
+                ],
+                "inflections": {
+                    "ppr": "voyant",
+                    "pp": "vu",
+                    "1|s|pres|indc": "vois",
+                    "2|s|pres|indc": "vois",
+                    "3|s|pres|indc": "voit",
+                    "1|p|pres|indc": "voyons",
+                    "2|p|pres|indc": "voyez",
+                    "3|p|pres|indc": "voient",
+                    "1|s|impf|indc": "voyais",
+                    "2|s|impf|indc": "voyais",
+                    "3|s|impf|indc": "voyait",
+                    "1|p|impf|indc": "voyions",
+                    "2|p|impf|indc": "voyiez",
+                    "3|p|impf|indc": "voyaient",
+                    "1|s|phis": "vis",
+                    "2|s|phis": "vis",
+                    "3|s|phis": "vit",
+                    "1|p|phis": "vîmes",
+                    "2|p|phis": "vîtes",
+                    "3|p|phis": "virent",
+                    "1|s|futr": "verrai",
+                    "2|s|futr": "verras",
+                    "3|s|futr": "verra",
+                    "1|p|futr": "verrons",
+                    "2|p|futr": "verrez",
+                    "3|p|futr": "verront",
+                    "1|s|cond": "verrais",
+                    "2|s|cond": "verrais",
+                    "3|s|cond": "verrait",
+                    "1|p|cond": "verrions",
+                    "2|p|cond": "verriez",
+                    "3|p|cond": "verraient",
+                    "1|s|pres|subj": "voie",
+                    "2|s|pres|subj": "voies",
+                    "3|s|pres|subj": "voie",
+                    "1|p|pres|subj": "voyions",
+                    "2|p|pres|subj": "voyiez",
+                    "3|p|pres|subj": "voient",
+                    "1|s|impf|subj": "visse",
+                    "2|s|impf|subj": "visses",
+                    "3|s|impf|subj": "vît",
+                    "1|p|impf|subj": "vissions",
+                    "2|p|impf|subj": "vissiez",
+                    "3|p|impf|subj": "vissent",
+                    "2|s|impr": "vois",
+                    "1|p|impr": "voyons",
+                    "2|p|impr": "voyez"
+                }
+            },
+            {
+                "part-of-speech": "adverb",
+                "gender": "none",
+                "definitions": [
+                    "voir",
+                    "(Louisiana) please (used to mark the imperative)"
+                ],
+                "inflections": {}
+            }
+        ],
+        "etymology": "From Old French veoir, veir, from earlier vedeir, from Latin vidēre, present active infinitive of videō, from Proto-Italic *widēō, ultimately from Proto-Indo-European *weyd-. Unrelated to voie and its derivatives and to voirie or avoir.\nSee cognates in regional languages in France : Norman veî or veir, Gallo vair, Picard vir, Bourguignon voi, Franco-Provençal vêre, Occitan veire or véser, Corsican vedè.\n",
+        "ancestors": [
+            {
+                "word": "veoir",
+                "lang-code": "fro",
+                "meaning": "see",
+                "language": "Old French"
+            },
+            {
+                "word": "vedeir",
+                "lang-code": "fro",
+                "meaning": "see",
+                "language": "Old French"
+            },
+            {
+                "word": "vidēre",
+                "lang-code": "la",
+                "meaning": "see",
+                "language": "Latin"
+            },
+            {
+                "word": "*widēō",
+                "lang-code": "itc-pro",
+                "meaning": "see",
+                "language": "Proto-Italic"
+            },
+            {
+                "word": "*weyd-",
+                "lang-code": "ine-pro",
+                "meaning": "see",
+                "language": "Proto-Indo-European"
+            }
+        ],
+        "descendants": [],
+        "cognates": [
+            {
+                "word": "veir",
+                "lang-code": "fro",
+                "meaning": "see",
+                "language": "Old French"
+            },
+            {
+                "word": "videō",
+                "lang-code": "la",
+                "meaning": "see",
+                "language": "Latin"
+            },
+            {
+                "word": "voie",
+                "lang-code": "fr",
+                "meaning": "see",
+                "language": "French"
+            },
+            {
+                "word": "voirie",
+                "lang-code": "fr",
+                "meaning": "see",
+                "language": "French"
+            },
+            {
+                "word": "veî",
+                "lang-code": "nrf",
+                "meaning": "see",
+                "language": "Norman"
+            },
+            {
+                "word": "vair",
+                "lang-code": "roa-gal",
+                "meaning": "see",
+                "language": "Gallo"
+            },
+            {
+                "word": "vir",
+                "lang-code": "pcd",
+                "meaning": "see",
+                "language": "Picard"
+            },
+            {
+                "word": "voi",
+                "lang-code": "roa-brg",
+                "meaning": "see",
+                "language": "Bourguignon"
+            },
+            {
+                "word": "vêre",
+                "lang-code": "frp",
+                "meaning": "see",
+                "language": "Franco-Provençal"
+            },
+            {
+                "word": "veire",
+                "lang-code": "oc",
+                "meaning": "see",
+                "language": "Occitan"
+            },
+            {
+                "word": "vedè",
+                "lang-code": "co",
+                "meaning": "see",
+                "language": "Corsican"
+            }
+        ],
+        "parent": {
+            "word": "veoir",
+            "lang-code": "fro",
+            "meaning": "see",
+            "language": "Old French"
+        }
+    }
+]
