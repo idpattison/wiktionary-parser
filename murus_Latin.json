@@ -1,0 +1,555 @@
+[
+    {
+        "key": "murus#la#1",
+        "word": "murus",
+        "language": "Latin",
+        "lang-code": "la",
+        "variant": 1,
+        "meaning": "wall",
+        "definition": "a wall",
+        "pronunciation": {
+            "phonemic": {
+                "(Classical) IPA": "/ˈmuː.rus/",
+                "(Ecclesiastical) IPA": "/ˈmu.rus/"
+            },
+            "phonetic": {
+                "(Classical) IPA": "[ˈmuː.ɾʊs̠]",
+                "(Ecclesiastical) IPA": "[ˈmuː.rus]"
+            }
+        },
+        "forms": [
+            {
+                "part-of-speech": "noun",
+                "gender": "m",
+                "definitions": [
+                    "mūrus m (genitive mūrī); second declension",
+                    "a wall"
+                ],
+                "inflections": {
+                    "genitive": "mūrī",
+                    "declension": "second declension",
+                    "nom|s": "mūrus",
+                    "nom|p": "mūrī",
+                    "gen|s": "mūrī",
+                    "gen|p": "mūrōrum",
+                    "dat|s": "mūrō",
+                    "dat|p": "mūrīs",
+                    "acc|s": "mūrum",
+                    "acc|p": "mūrōs",
+                    "abl|s": "mūrō",
+                    "abl|p": "mūrīs",
+                    "voc|s": "mūre",
+                    "voc|p": "mūrī"
+                }
+            }
+        ],
+        "etymology": "From Proto-Italic *moiros, from Proto-Indo-European *mey- (“to fix, to build fortifications or fences”), see also Latin mūnīre (“to protect”), Old Norse -mæri (“border-land, boundary”), Old English mære (“landmark, border, boundary”). See also Sanskrit मुर् (múr, “wall”), Sanskrit मुर (mura, “surrounding, encircling, enclosing”).\n",
+        "ancestors": [
+            {
+                "word": "*moiros",
+                "lang-code": "itc-pro",
+                "meaning": "wall",
+                "language": "Proto-Italic"
+            },
+            {
+                "word": "*mey-",
+                "lang-code": "ine-pro",
+                "meaning": "to fix, to build fortifications or fences",
+                "language": "Proto-Indo-European"
+            }
+        ],
+        "descendants": [
+            {
+                "word": "meur",
+                "lang-code": "roa-brg",
+                "meaning": "wall",
+                "language": "Bourguignon"
+            },
+            {
+                "word": "mor",
+                "lang-code": "dlm",
+                "meaning": "wall",
+                "language": "Dalmatian"
+            },
+            {
+                "word": "moir",
+                "lang-code": "dlm",
+                "meaning": "wall",
+                "language": "Dalmatian"
+            },
+            {
+                "word": "meur",
+                "lang-code": "wa",
+                "meaning": "wall",
+                "language": "Walloon"
+            },
+            {
+                "word": "mur",
+                "lang-code": "rup",
+                "meaning": "wall",
+                "language": "Aromanian"
+            },
+            {
+                "word": "muro",
+                "lang-code": "it",
+                "meaning": "wall",
+                "language": "Italian"
+            },
+            {
+                "word": "mur",
+                "lang-code": "fro",
+                "meaning": "wall",
+                "language": "Old French"
+            },
+            {
+                "word": "mur",
+                "lang-code": "fr",
+                "meaning": "wall",
+                "language": "French"
+            },
+            {
+                "word": "mur",
+                "lang-code": "nrf",
+                "meaning": "wall",
+                "language": "Norman"
+            },
+            {
+                "word": "murer",
+                "lang-code": "fro",
+                "meaning": "wall",
+                "language": "Old French"
+            },
+            {
+                "word": "mure",
+                "lang-code": "en",
+                "meaning": "wall",
+                "loan-word": true,
+                "language": "English"
+            },
+            {
+                "word": "mur",
+                "lang-code": "pro",
+                "meaning": "wall",
+                "language": "Old Occitan"
+            },
+            {
+                "word": "mur",
+                "lang-code": "ca",
+                "meaning": "wall",
+                "language": "Catalan"
+            },
+            {
+                "word": "mur",
+                "lang-code": "oc",
+                "meaning": "wall",
+                "language": "Occitan"
+            },
+            {
+                "word": "mura",
+                "lang-code": "oc",
+                "meaning": "wall",
+                "language": "Occitan"
+            },
+            {
+                "word": "muro",
+                "lang-code": "roa-opt",
+                "meaning": "wall",
+                "language": "Old Portuguese"
+            },
+            {
+                "word": "muro",
+                "lang-code": "gl",
+                "meaning": "wall",
+                "language": "Galician"
+            },
+            {
+                "word": "muro",
+                "lang-code": "pt",
+                "meaning": "wall",
+                "language": "Portuguese"
+            },
+            {
+                "word": "muro",
+                "lang-code": "osp",
+                "meaning": "wall",
+                "language": "Old Spanish"
+            },
+            {
+                "word": "muro",
+                "lang-code": "es",
+                "meaning": "wall",
+                "language": "Spanish"
+            },
+            {
+                "word": "mûr",
+                "lang-code": "fur",
+                "meaning": "wall",
+                "language": "Friulian"
+            },
+            {
+                "word": "mir",
+                "lang-code": "rm",
+                "meaning": "wall",
+                "language": "Romansch"
+            },
+            {
+                "word": "mür",
+                "lang-code": "rm",
+                "meaning": "wall",
+                "language": "Romansch"
+            },
+            {
+                "word": "meir",
+                "lang-code": "rm",
+                "meaning": "wall",
+                "language": "Romansch"
+            },
+            {
+                "word": "muru",
+                "lang-code": "sc",
+                "meaning": "wall",
+                "language": "Sardinian"
+            },
+            {
+                "word": "muru",
+                "lang-code": "scn",
+                "meaning": "wall",
+                "language": "Sicilian"
+            },
+            {
+                "word": "muro",
+                "lang-code": "vec",
+                "meaning": "wall",
+                "language": "Venetian"
+            },
+            {
+                "word": "mur",
+                "lang-code": "vec",
+                "meaning": "wall",
+                "language": "Venetian"
+            },
+            {
+                "word": "mur",
+                "lang-code": "sq",
+                "meaning": "wall",
+                "loan-word": true,
+                "language": "Albanian"
+            },
+            {
+                "word": "murus",
+                "lang-code": "en",
+                "meaning": "wall",
+                "loan-word": true,
+                "language": "English"
+            },
+            {
+                "word": "mūras",
+                "lang-code": "lt",
+                "meaning": "wall",
+                "loan-word": true,
+                "language": "Lithuanian"
+            },
+            {
+                "word": "mūr",
+                "lang-code": "odt",
+                "meaning": "wall",
+                "loan-word": true,
+                "language": "Old Dutch"
+            },
+            {
+                "word": "mūra",
+                "lang-code": "odt",
+                "meaning": "wall",
+                "language": "Old Dutch"
+            },
+            {
+                "word": "muur",
+                "lang-code": "dum",
+                "meaning": "wall",
+                "language": "Middle Dutch"
+            },
+            {
+                "word": "muur",
+                "lang-code": "nl",
+                "meaning": "wall",
+                "language": "Dutch"
+            },
+            {
+                "word": "muur",
+                "lang-code": "af",
+                "meaning": "wall",
+                "language": "Afrikaans"
+            },
+            {
+                "word": "moer",
+                "lang-code": "li",
+                "meaning": "wall",
+                "language": "Limburgish"
+            },
+            {
+                "word": "meur",
+                "lang-code": "vls",
+                "meaning": "wall",
+                "language": "West Flemish"
+            },
+            {
+                "word": "muorre",
+                "lang-code": "fy",
+                "meaning": "wall",
+                "loan-word": true,
+                "language": "West Frisian"
+            },
+            {
+                "word": "múr",
+                "lang-code": "sga",
+                "meaning": "wall",
+                "loan-word": true,
+                "language": "Old Irish"
+            },
+            {
+                "word": "múr",
+                "lang-code": "ga",
+                "meaning": "wall",
+                "language": "Irish"
+            },
+            {
+                "word": "mùr",
+                "lang-code": "gd",
+                "meaning": "wall",
+                "language": "Scottish Gaelic"
+            },
+            {
+                "word": "mūra",
+                "lang-code": "goh",
+                "meaning": "wall",
+                "loan-word": true,
+                "language": "Old High German"
+            },
+            {
+                "word": "mūre",
+                "lang-code": "gmh",
+                "meaning": "wall",
+                "language": "Middle High German"
+            },
+            {
+                "word": "Muur",
+                "lang-code": "gsw",
+                "meaning": "wall",
+                "language": "Alemannic German"
+            },
+            {
+                "word": "Muur",
+                "lang-code": "gmw-cfr",
+                "meaning": "wall",
+                "language": "Central Franconian"
+            },
+            {
+                "word": "Mouer",
+                "lang-code": "gmw-cfr",
+                "meaning": "wall",
+                "language": "Central Franconian"
+            },
+            {
+                "word": "Mauer",
+                "lang-code": "de",
+                "meaning": "wall",
+                "language": "German"
+            },
+            {
+                "word": "Mauer",
+                "lang-code": "lb",
+                "meaning": "wall",
+                "language": "Luxembourgish"
+            },
+            {
+                "word": "mur",
+                "lang-code": "pl",
+                "meaning": "wall",
+                "loan-word": true,
+                "language": "Polish"
+            },
+            {
+                "word": "мур",
+                "lang-code": "be",
+                "meaning": "wall",
+                "loan-word": true,
+                "language": "Belarusian",
+                "latin-form": "mur"
+            },
+            {
+                "word": "mūras",
+                "lang-code": "lt",
+                "meaning": "wall",
+                "loan-word": true,
+                "language": "Lithuanian"
+            },
+            {
+                "word": "мур",
+                "lang-code": "uk",
+                "meaning": "wall",
+                "loan-word": true,
+                "language": "Ukrainian",
+                "latin-form": "mur"
+            },
+            {
+                "word": "múrr",
+                "lang-code": "non",
+                "meaning": "wall",
+                "loan-word": true,
+                "language": "Old Norse"
+            },
+            {
+                "word": "mur",
+                "lang-code": "da",
+                "meaning": "wall",
+                "language": "Danish"
+            },
+            {
+                "word": "múr",
+                "lang-code": "is",
+                "meaning": "wall",
+                "language": "Icelandic"
+            },
+            {
+                "word": "múrur",
+                "lang-code": "fo",
+                "meaning": "wall",
+                "language": "Faroese"
+            },
+            {
+                "word": "mur",
+                "lang-code": "no",
+                "meaning": "wall",
+                "language": "Norwegian"
+            },
+            {
+                "word": "mūra",
+                "lang-code": "osx",
+                "meaning": "wall",
+                "loan-word": true,
+                "language": "Old Saxon"
+            },
+            {
+                "word": "mure",
+                "lang-code": "gml",
+                "meaning": "wall",
+                "language": "Middle Low German"
+            },
+            {
+                "word": "mur",
+                "lang-code": "gml",
+                "meaning": "wall",
+                "language": "Middle Low German"
+            },
+            {
+                "word": "mür",
+                "lang-code": "gml",
+                "meaning": "wall",
+                "language": "Middle Low German"
+            },
+            {
+                "word": "mure",
+                "lang-code": "nds-nl",
+                "meaning": "wall",
+                "language": "Dutch Low Saxon"
+            },
+            {
+                "word": "müür",
+                "lang-code": "et",
+                "meaning": "wall",
+                "loan-word": true,
+                "language": "Estonian"
+            },
+            {
+                "word": "mur",
+                "lang-code": "pl",
+                "meaning": "wall",
+                "loan-word": true,
+                "language": "Polish"
+            },
+            {
+                "word": "mur",
+                "lang-code": "ro",
+                "meaning": "wall",
+                "loan-word": true,
+                "language": "Romanian"
+            },
+            {
+                "word": "múr",
+                "lang-code": "sk",
+                "meaning": "wall",
+                "loan-word": true,
+                "language": "Slovak"
+            },
+            {
+                "word": "mur",
+                "lang-code": "sv",
+                "meaning": "wall",
+                "loan-word": true,
+                "language": "Swedish"
+            },
+            {
+                "word": "muuri",
+                "lang-code": "fi",
+                "meaning": "wall",
+                "loan-word": true,
+                "language": "Finnish"
+            },
+            {
+                "word": "мур",
+                "lang-code": "uk",
+                "meaning": "wall",
+                "loan-word": true,
+                "language": "Ukrainian",
+                "latin-form": "mur"
+            },
+            {
+                "word": "mur",
+                "lang-code": "cy",
+                "meaning": "wall",
+                "loan-word": true,
+                "language": "Welsh"
+            }
+        ],
+        "cognates": [
+            {
+                "word": "mūnīre",
+                "lang-code": "la",
+                "meaning": "to protect",
+                "language": "Latin"
+            },
+            {
+                "word": "-mæri",
+                "lang-code": "non",
+                "meaning": "border-land, boundary",
+                "language": "Old Norse"
+            },
+            {
+                "word": "mære",
+                "lang-code": "ang",
+                "meaning": "landmark, border, boundary",
+                "language": "Old English"
+            },
+            {
+                "word": "मुर्",
+                "lang-code": "sa",
+                "meaning": "wall",
+                "language": "Sanskrit",
+                "latin-form": "múr"
+            },
+            {
+                "word": "मुर",
+                "lang-code": "sa",
+                "meaning": "surrounding, encircling, enclosing",
+                "language": "Sanskrit",
+                "latin-form": "mura"
+            }
+        ],
+        "parent": {
+            "word": "*moiros",
+            "lang-code": "itc-pro",
+            "meaning": "wall",
+            "language": "Proto-Italic"
+        }
+    }
+]

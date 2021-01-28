@@ -1,0 +1,587 @@
+[
+    {
+        "key": "video#la#1",
+        "word": "video",
+        "language": "Latin",
+        "lang-code": "la",
+        "variant": 1,
+        "meaning": "see",
+        "definition": "I see, perceive; look (at)",
+        "pronunciation": {
+            "phonemic": {
+                "(Classical) IPA": "/ˈwi.de.oː/",
+                "(Ecclesiastical) IPA": "/ˈvi.de.o/",
+                "(Vulgar) IPA": "/ˈβi.de.oː/"
+            },
+            "phonetic": {
+                "(Classical) IPA": "[ˈwɪ.d̪e.oː]",
+                "(Ecclesiastical) IPA": "[ˈviː.d̪ɛ.ɔ]",
+                "(Vulgar) IPA": "[ˈbe.dʲ.o]"
+            }
+        },
+        "forms": [
+            {
+                "part-of-speech": "verb",
+                "gender": "none",
+                "definitions": [
+                    "videō (present infinitive vidēre, perfect active vīdī, supine vīsum); second conjugation",
+                    "I see, perceive; look (at)",
+                    "I observe, note",
+                    "I understand, perceive, comprehend",
+                    "I look (at), consider, reflect (upon)",
+                    "I look out for, see to, care for, provide, make sure",
+                    "(passive) I am regarded, seem, appear",
+                    "(passive, used impersonally) It seems proper or right"
+                ],
+                "inflections": {
+                    "present infinitive": "vidēre",
+                    "perfect active": "vīdī",
+                    "supine": "vīsum",
+                    "conjugation": "second conjugation",
+                    "1|s|pres|act|ind": "videō",
+                    "2|s|pres|act|ind": "vidēs",
+                    "3|s|pres|act|ind": "videt",
+                    "1|p|pres|act|ind": "vidēmus",
+                    "2|p|pres|act|ind": "vidētis",
+                    "3|p|pres|act|ind": "vident",
+                    "1|s|impf|act|ind": "vidēbam",
+                    "2|s|impf|act|ind": "vidēbās",
+                    "3|s|impf|act|ind": "vidēbat",
+                    "1|p|impf|act|ind": "vidēbāmus",
+                    "2|p|impf|act|ind": "vidēbātis",
+                    "3|p|impf|act|ind": "vidēbant",
+                    "1|s|fut|act|ind": "vidēbō",
+                    "2|s|fut|act|ind": "vidēbis",
+                    "3|s|fut|act|ind": "vidēbit",
+                    "1|p|fut|act|ind": "vidēbimus",
+                    "2|p|fut|act|ind": "vidēbitis",
+                    "3|p|fut|act|ind": "vidēbunt",
+                    "1|s|perf|act|ind": "vīdī",
+                    "2|s|perf|act|ind": "vīdistī",
+                    "3|s|perf|act|ind": "vīdit",
+                    "1|p|perf|act|ind": "vīdimus",
+                    "2|p|perf|act|ind": "vīdistis",
+                    "3|p|perf|act|ind": "vīdērunt",
+                    "1|s|plup|act|ind": "vīderam",
+                    "2|s|plup|act|ind": "vīderās",
+                    "3|s|plup|act|ind": "vīderat",
+                    "1|p|plup|act|ind": "vīderāmus",
+                    "2|p|plup|act|ind": "vīderātis",
+                    "3|p|plup|act|ind": "vīderant",
+                    "1|s|fut|perf|act|ind": "vīderō",
+                    "2|s|fut|perf|act|ind": "vīderis",
+                    "3|s|fut|perf|act|ind": "vīderit",
+                    "1|p|fut|perf|act|ind": "vīderimus",
+                    "2|p|fut|perf|act|ind": "vīderitis",
+                    "3|p|fut|perf|act|ind": "vīderint",
+                    "1|s|pres|pass|ind": "videor",
+                    "2|s|pres|pass|ind": "vidēris",
+                    "3|s|pres|pass|ind": "vidētur",
+                    "1|p|pres|pass|ind": "vidēmur",
+                    "2|p|pres|pass|ind": "vidēminī",
+                    "3|p|pres|pass|ind": "videntur",
+                    "1|s|impf|pass|ind": "vidēbar",
+                    "2|s|impf|pass|ind": "vidēbāris",
+                    "3|s|impf|pass|ind": "vidēbātur",
+                    "1|p|impf|pass|ind": "vidēbāmur",
+                    "2|p|impf|pass|ind": "vidēbāminī",
+                    "3|p|impf|pass|ind": "vidēbantur",
+                    "1|s|fut|pass|ind": "vidēbor",
+                    "2|s|fut|pass|ind": "vidēberis",
+                    "3|s|fut|pass|ind": "vidēbitur",
+                    "1|p|fut|pass|ind": "vidēbimur",
+                    "2|p|fut|pass|ind": "vidēbiminī",
+                    "3|p|fut|pass|ind": "vidēbuntur",
+                    "1|s|pres|act|sub": "videam",
+                    "2|s|pres|act|sub": "videās",
+                    "3|s|pres|act|sub": "videat",
+                    "1|p|pres|act|sub": "videāmus",
+                    "2|p|pres|act|sub": "videātis",
+                    "3|p|pres|act|sub": "videant",
+                    "1|s|impf|act|sub": "vidērem",
+                    "2|s|impf|act|sub": "vidērēs",
+                    "3|s|impf|act|sub": "vidēret",
+                    "1|p|impf|act|sub": "vidērēmus",
+                    "2|p|impf|act|sub": "vidērētis",
+                    "3|p|impf|act|sub": "vidērent",
+                    "1|s|perf|act|sub": "vīderim",
+                    "2|s|perf|act|sub": "vīderīs",
+                    "3|s|perf|act|sub": "vīderit",
+                    "1|p|perf|act|sub": "vīderīmus",
+                    "2|p|perf|act|sub": "vīderītis",
+                    "3|p|perf|act|sub": "vīderint",
+                    "1|s|plup|act|sub": "vīdissem",
+                    "2|s|plup|act|sub": "vīdissēs",
+                    "3|s|plup|act|sub": "vīdisset",
+                    "1|p|plup|act|sub": "vīdissēmus",
+                    "2|p|plup|act|sub": "vīdissētis",
+                    "3|p|plup|act|sub": "vīdissent",
+                    "1|s|pres|pass|sub": "videar",
+                    "2|s|pres|pass|sub": "videāris",
+                    "3|s|pres|pass|sub": "videātur",
+                    "1|p|pres|pass|sub": "videāmur",
+                    "2|p|pres|pass|sub": "videāminī",
+                    "3|p|pres|pass|sub": "videantur",
+                    "1|s|impf|pass|sub": "vidērer",
+                    "2|s|impf|pass|sub": "vidērēris",
+                    "3|s|impf|pass|sub": "vidērētur",
+                    "1|p|impf|pass|sub": "vidērēmur",
+                    "2|p|impf|pass|sub": "vidērēminī",
+                    "3|p|impf|pass|sub": "vidērentur",
+                    "2|s|pres|act|imp": "vidē",
+                    "2|p|pres|act|imp": "vidēte",
+                    "2|s|fut|act|imp": "vidētō",
+                    "3|s|fut|act|imp": "vidētō",
+                    "2|p|fut|act|imp": "vidētōte",
+                    "3|p|fut|act|imp": "videntō",
+                    "2|s|pres|pass|imp": "vidēre",
+                    "2|p|pres|pass|imp": "vidēminī",
+                    "2|s|fut|pass|imp": "vidētor",
+                    "3|s|fut|pass|imp": "vidētor",
+                    "3|p|fut|pass|imp": "videntor",
+                    "pres|act|inf": "vidēre",
+                    "perf|act|inf": "vīdisse",
+                    "pres|pass|inf": "vidērī",
+                    "pres|act|part": "vidēns",
+                    "fut|act|part": "vīsūrus",
+                    "perf|pass|part": "vīsus",
+                    "fut|pass|part": "videndus",
+                    "ger|gen": "videndī",
+                    "ger|dat": "videndō",
+                    "ger|acc": "videndum",
+                    "ger|abl": "videndō",
+                    "sup|acc": "vīsum",
+                    "sup|abl": "vīsū"
+                }
+            }
+        ],
+        "etymology": "From Proto-Italic *widēō, from Proto-Indo-European *weyd- (“to know; see”).\n",
+        "ancestors": [
+            {
+                "word": "*widēō",
+                "lang-code": "itc-pro",
+                "meaning": "see",
+                "language": "Proto-Italic"
+            },
+            {
+                "word": "*weyd-",
+                "lang-code": "ine-pro",
+                "meaning": "to know; see",
+                "language": "Proto-Indo-European"
+            }
+        ],
+        "descendants": [
+            {
+                "word": "beyer",
+                "lang-code": "an",
+                "meaning": "see",
+                "language": "Aragonese"
+            },
+            {
+                "word": "veyer",
+                "lang-code": "an",
+                "meaning": "see",
+                "language": "Aragonese"
+            },
+            {
+                "word": "ved",
+                "lang-code": "rup",
+                "meaning": "see",
+                "language": "Aromanian"
+            },
+            {
+                "word": "videari",
+                "lang-code": "rup",
+                "meaning": "see",
+                "language": "Aromanian"
+            },
+            {
+                "word": "ver",
+                "lang-code": "ast",
+                "meaning": "see",
+                "language": "Asturian"
+            },
+            {
+                "word": "voi",
+                "lang-code": "roa-brg",
+                "meaning": "see",
+                "language": "Bourguignon"
+            },
+            {
+                "word": "veure",
+                "lang-code": "ca",
+                "meaning": "see",
+                "language": "Catalan"
+            },
+            {
+                "word": "vore",
+                "lang-code": "ca",
+                "meaning": "see",
+                "language": "Catalan"
+            },
+            {
+                "word": "vede",
+                "lang-code": "co",
+                "meaning": "see",
+                "language": "Corsican"
+            },
+            {
+                "word": "vedar",
+                "lang-code": "dlm",
+                "meaning": "see",
+                "language": "Dalmatian"
+            },
+            {
+                "word": "vide",
+                "lang-code": "en",
+                "meaning": "see",
+                "language": "English"
+            },
+            {
+                "word": "video",
+                "lang-code": "en",
+                "meaning": "see",
+                "language": "English"
+            },
+            {
+                "word": "vidi",
+                "lang-code": "eo",
+                "meaning": "see",
+                "language": "Esperanto"
+            },
+            {
+                "word": "video",
+                "lang-code": "eo",
+                "meaning": "see",
+                "language": "Esperanto"
+            },
+            {
+                "word": "vel",
+                "lang-code": "ext",
+                "meaning": "see",
+                "language": "Extremaduran"
+            },
+            {
+                "word": "vêre",
+                "lang-code": "frp",
+                "meaning": "see",
+                "language": "Franco-Provençal"
+            },
+            {
+                "word": "voir",
+                "lang-code": "fr",
+                "meaning": "see",
+                "language": "French"
+            },
+            {
+                "word": "viodi",
+                "lang-code": "fur",
+                "meaning": "see",
+                "language": "Friulian"
+            },
+            {
+                "word": "ver",
+                "lang-code": "gl",
+                "meaning": "see",
+                "language": "Galician"
+            },
+            {
+                "word": "vér'",
+                "lang-code": "roa-gal",
+                "meaning": "see",
+                "language": "Gallo"
+            },
+            {
+                "word": "βίντεο",
+                "lang-code": "el",
+                "meaning": "see",
+                "language": "Greek",
+                "latin-form": "vínteo"
+            },
+            {
+                "word": "vidar",
+                "lang-code": "io",
+                "meaning": "see",
+                "language": "Ido"
+            },
+            {
+                "word": "vidi",
+                "lang-code": "ist",
+                "meaning": "see",
+                "language": "Istriot"
+            },
+            {
+                "word": "ved",
+                "lang-code": "ruo",
+                "meaning": "see",
+                "language": "Istro-Romanian"
+            },
+            {
+                "word": "vedu",
+                "lang-code": "ruo",
+                "meaning": "see",
+                "language": "Istro-Romanian"
+            },
+            {
+                "word": "vedere",
+                "lang-code": "it",
+                "meaning": "see",
+                "language": "Italian"
+            },
+            {
+                "word": "vere",
+                "lang-code": "roa-leo",
+                "meaning": "see",
+                "language": "Leonese"
+            },
+            {
+                "word": "ber",
+                "lang-code": "mwl",
+                "meaning": "see",
+                "language": "Mirandese"
+            },
+            {
+                "word": "veî",
+                "lang-code": "nrf",
+                "meaning": "see",
+                "language": "Norman"
+            },
+            {
+                "word": "vedei",
+                "lang-code": "lld",
+                "meaning": "see",
+                "language": "Ladin"
+            },
+            {
+                "word": "veder",
+                "lang-code": "lld",
+                "meaning": "see",
+                "language": "Ladin"
+            },
+            {
+                "word": "vedè",
+                "lang-code": "nap",
+                "meaning": "see",
+                "language": "Neapolitan"
+            },
+            {
+                "word": "veire",
+                "lang-code": "oc",
+                "meaning": "see",
+                "language": "Occitan"
+            },
+            {
+                "word": "véder",
+                "lang-code": "oc",
+                "meaning": "see",
+                "language": "Occitan"
+            },
+            {
+                "word": "véser",
+                "lang-code": "oc",
+                "meaning": "see",
+                "language": "Occitan"
+            },
+            {
+                "word": "veoir",
+                "lang-code": "fro",
+                "meaning": "see",
+                "language": "Old French"
+            },
+            {
+                "word": "veir",
+                "lang-code": "fro",
+                "meaning": "see",
+                "language": "Old French"
+            },
+            {
+                "word": "vedeir",
+                "lang-code": "fro",
+                "meaning": "see",
+                "language": "Old French"
+            },
+            {
+                "word": "vair",
+                "lang-code": "roa-ang",
+                "meaning": "see",
+                "language": "Angevin"
+            },
+            {
+                "word": "vair",
+                "lang-code": "roa-gal",
+                "meaning": "see",
+                "language": "Gallo"
+            },
+            {
+                "word": "veir",
+                "lang-code": "nrf",
+                "meaning": "see",
+                "language": "Norman"
+            },
+            {
+                "word": "vir",
+                "lang-code": "pcd",
+                "meaning": "see",
+                "language": "Picard"
+            },
+            {
+                "word": "view",
+                "lang-code": "en",
+                "meaning": "see",
+                "loan-word": true,
+                "language": "English"
+            },
+            {
+                "word": "vezer",
+                "lang-code": "pro",
+                "meaning": "see",
+                "language": "Old Occitan"
+            },
+            {
+                "word": "veer",
+                "lang-code": "roa-opt",
+                "meaning": "see",
+                "language": "Old Portuguese"
+            },
+            {
+                "word": "vëdde",
+                "lang-code": "pms",
+                "meaning": "see",
+                "language": "Piedmontese"
+            },
+            {
+                "word": "ver",
+                "lang-code": "pt",
+                "meaning": "see",
+                "language": "Portuguese"
+            },
+            {
+                "word": "vedea",
+                "lang-code": "ro",
+                "meaning": "see",
+                "language": "Romanian"
+            },
+            {
+                "word": "vedere",
+                "lang-code": "ro",
+                "meaning": "see",
+                "language": "Romanian"
+            },
+            {
+                "word": "vesair",
+                "lang-code": "rm",
+                "meaning": "see",
+                "language": "Romansch"
+            },
+            {
+                "word": "veser",
+                "lang-code": "rm",
+                "meaning": "see",
+                "language": "Romansch"
+            },
+            {
+                "word": "vaseir",
+                "lang-code": "rm",
+                "meaning": "see",
+                "language": "Romansch"
+            },
+            {
+                "word": "vaser",
+                "lang-code": "rm",
+                "meaning": "see",
+                "language": "Romansch"
+            },
+            {
+                "word": "veir",
+                "lang-code": "rm",
+                "meaning": "see",
+                "language": "Romansch"
+            },
+            {
+                "word": "vzair",
+                "lang-code": "rm",
+                "meaning": "see",
+                "language": "Romansch"
+            },
+            {
+                "word": "biri",
+                "lang-code": "sc",
+                "meaning": "see",
+                "language": "Sardinian"
+            },
+            {
+                "word": "bìdere",
+                "lang-code": "sc",
+                "meaning": "see",
+                "language": "Sardinian"
+            },
+            {
+                "word": "bìere",
+                "lang-code": "sc",
+                "meaning": "see",
+                "language": "Sardinian"
+            },
+            {
+                "word": "vìdere",
+                "lang-code": "sc",
+                "meaning": "see",
+                "language": "Sardinian"
+            },
+            {
+                "word": "vìdiri",
+                "lang-code": "scn",
+                "meaning": "see",
+                "language": "Sicilian"
+            },
+            {
+                "word": "vìrriri",
+                "lang-code": "scn",
+                "meaning": "see",
+                "language": "Sicilian"
+            },
+            {
+                "word": "ver",
+                "lang-code": "es",
+                "meaning": "see",
+                "language": "Spanish"
+            },
+            {
+                "word": "vouèr",
+                "lang-code": "roa-tou",
+                "meaning": "see",
+                "language": "Tourangeau"
+            },
+            {
+                "word": "védar",
+                "lang-code": "vec",
+                "meaning": "see",
+                "language": "Venetian"
+            },
+            {
+                "word": "véder",
+                "lang-code": "vec",
+                "meaning": "see",
+                "language": "Venetian"
+            },
+            {
+                "word": "vey",
+                "lang-code": "wa",
+                "meaning": "see",
+                "language": "Walloon"
+            },
+            {
+                "word": "vir",
+                "lang-code": "wa",
+                "meaning": "see",
+                "language": "Walloon"
+            }
+        ],
+        "cognates": [],
+        "parent": {
+            "word": "*widēō",
+            "lang-code": "itc-pro",
+            "meaning": "see",
+            "language": "Proto-Italic"
+        }
+    }
+]

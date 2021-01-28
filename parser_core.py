@@ -300,9 +300,23 @@ class WiktionaryParser(object):
             span_tag = self.soup.find_all('span', {'id': related_id})[0]
             parent_tag = span_tag.parent
             if (relation_type in ['conjugation', 'declension', 'inflection']):
-                while parent_tag and not parent_tag.find_all('table'):
+                while parent_tag and not parent_tag.find_all('table') and not parent_tag.name == 'table':
                     parent_tag = parent_tag.find_next_sibling()
-                for table_tag in parent_tag.find_all('table'):
+                if parent_tag and parent_tag.name != 'table':
+                    for table_tag in parent_tag.find_all('table'):
+                        if ('inflection-table' in table_tag.attrs['class']):
+                            for td_tag in table_tag.find_all('td'):
+                                if len(td_tag.contents) > 0 and td_tag.contents[0].name == 'span':
+                                    infl_tag = td_tag.contents[0]
+                                    if 'form-of' in infl_tag.attrs['class']:
+                                        item_tag = {
+                                            'text': infl_tag.text,
+                                            'name': infl_tag.name,
+                                            'class': infl_tag.attrs['class']
+                                        }
+                                        words['map'].append(item_tag)
+                if parent_tag and parent_tag.name == 'table':
+                    table_tag = parent_tag
                     if ('inflection-table' in table_tag.attrs['class']):
                         for td_tag in table_tag.find_all('td'):
                             if len(td_tag.contents) > 0 and td_tag.contents[0].name == 'span':
